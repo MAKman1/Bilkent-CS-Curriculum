@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1556607549 source:d:\bilkent\cs202\hw2\hw2\bst.cpp
+	"BST.h"
+	<iostream>
+	<string.h>
+
+1556611602 source:d:\bilkent\cs202\hw2\hw2\main.cpp
+	<iostream>
+	"BST.h"
+
+1553287942 source:d:\bilkent\cs202\hw2\hw2\bstnode.cpp
+	"BSTNode.h"
+	<string.h>
+
+1553287924 d:\bilkent\cs202\hw2\hw2\bstnode.h
+	<string.h>
+
+1554185114 d:\bilkent\cs202\hw2\hw2\bst.h
+	"BSTNode.h"
+

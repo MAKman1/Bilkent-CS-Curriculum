@@ -1,0 +1,172 @@
+package cardgame;
+
+import java.util.ArrayList;
+
+// Cardgame
+// author:
+// date:
+public class CardGame
+{
+  
+    // properties
+    Cards             fullPack;
+    ArrayList<Player> players;
+    ScoreCard         scoreCard;
+    Cards[]           cardsOnTable;
+    int               roundNo;
+    int               turnOfPlayer;
+    
+    // constructors
+    public CardGame( Player p1, Player p2, Player p3, Player p4)
+    {
+      this.players = new ArrayList();
+      this.players.add(p1);
+      this.players.add(p2);
+      this.players.add(p3);
+      this.players.add(p4);
+      
+      this.scoreCard = new ScoreCard(this.players.size());
+      this.cardsOnTable = new Cards[(int) 52 / this.players.size()];
+      this.fullPack = new Cards( true);
+      this.roundNo = 0;
+      this.turnOfPlayer = 0;
+      
+      this.fullPack.shuffle();
+      this.initializeCard();
+      this.serveCards();
+    }
+    
+    // methods
+    public void initializeCard()
+    {
+      for (int i = 0; i < (int) 52 / this.players.size(); i++)
+      {
+        this.cardsOnTable[i] = new Cards( false);
+      }
+    }
+    
+    public void serveCards()
+    {
+      for (int i = 0; i < 4; i++)
+      {
+        for (int j = 0; j < 13; j++)
+        {
+          players.get(i).add( this.fullPack.getTopCard());
+        }
+      }
+    }
+    
+    public boolean playTurn( Player p, Card c)
+    {
+        if (this.isGameOver())
+        {
+          p.add( c);
+          return false;
+        }
+        else if (!this.isTurnOf( p))
+        {
+          p.add( c);
+          return false;
+        }
+        else
+        {
+          this.cardsOnTable[roundNo].addTopCard( c);
+          if( turnOfPlayer < this.players.size() - 1)
+          {
+            this.turnOfPlayer++;
+          }
+          else
+          {
+            this.updateScores();
+            this.roundNo++;
+            this.turnOfPlayer = 0;
+            
+          }
+          return true;
+        }
+    }
+    
+    public void updateScores()
+    {
+      int highest;
+      int temp;
+      highest = highestScore();
+      for (int i = 0; i < this.players.size(); i++)
+      {
+        if (this.cardsOnTable[this.roundNo].getCard(i).getFaceValue() == highest)
+        {
+          this.scoreCard.update(i, 1);
+        }
+      }
+    }
+    
+    
+    public int highestScore()
+    {
+      int highest;
+      highest = 0;
+      for (int i = 0; i < this.players.size(); i++)
+      {
+        if (this.cardsOnTable[this.roundNo].getCard(i).getFaceValue() > highest)
+        {
+          highest = this.cardsOnTable[this.roundNo].getCard(i).getFaceValue();
+        }
+      }
+      return highest;
+    }
+    
+    public boolean isTurnOf( Player p)
+    {
+        if( p.equals(players.get(turnOfPlayer)))
+          return true;
+        return false;
+    }
+    
+    public boolean isGameOver()
+    {
+        if( this.roundNo > ((int) 52 / (this.players.size())) - 1)
+          return true;
+        return false;
+    }
+    
+    public int getScore( int playerNumber)
+    {
+        return this.scoreCard.getScore(playerNumber);
+    }
+    
+    public String getName( int playerNumber)
+    {
+        return this.players.get(playerNumber).getName();
+    }
+    
+    public int getRoundNo()
+    {
+        return this.roundNo;
+    }
+    
+    public int getTurnOfPlayerNo()
+    {
+        return this.turnOfPlayer;
+    }
+    
+    public Player[] getWinners()
+    {
+      int[] winners;
+      Player[] playerReturn;
+      
+      winners = this.scoreCard.getWinners();
+      playerReturn = new Player[winners.length];
+      for( int i = 0; i < winners.length; i++)
+      {
+        playerReturn[i] = this.players.get(winners[i]);
+      }
+      return playerReturn;
+      
+    }
+    
+    public String showScoreCard()
+    {
+        return scoreCard.toString();
+    }
+    
+}

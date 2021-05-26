@@ -1,0 +1,40 @@
+public class HTMLFilteredReader extends MySimpleURLReader
+{
+   
+   public HTMLFilteredReader( String url)
+   {
+      super( url);
+   }
+   
+   @Override
+   public String getPageContents()
+   {
+      String input;
+      String output;
+      int beginPosition;
+      int lastPosition;
+      
+      input = super.getPageContents();
+      output = "";
+      beginPosition = 0;
+      lastPosition = 0;
+      
+      for (int i = 0; i < input.length(); i++)
+      {
+         if( input.charAt(i) == '<')
+            beginPosition = i;
+         else if( input.charAt(i) == '>')
+         {
+            lastPosition = i;
+            output = output + input.substring(beginPosition + 1, lastPosition);  
+         }
+      }
+      
+      return output;
+   }
+   
+   public String getUnfilteredPageContents()
+   {
+      return super.getPageContents();
+   }
+}

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado Lab Edition v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# 
+# Start of session at: Sat Mar 17 18:11:40 2018
+# Process ID: 3900
+# Current directory: d:/Users/hamze/Desktop/keypad_7seg_netlist_modules/keypad_7seg.hw
+# Command line: vivado_lab.exe -gui_launcher_event rodinguilauncherevent220 d:\Users\hamze\Desktop\keypad_7seg_netlist_modules\keypad_7seg.hw\keypad_7seg.lpr
+# Log file: d:/Users/hamze/Desktop/keypad_7seg_netlist_modules/keypad_7seg.hw/vivado_lab.log
+# Journal file: d:/Users/hamze/Desktop/keypad_7seg_netlist_modules/keypad_7seg.hw\vivado_lab.jou
+#-----------------------------------------------------------
+start_gui
+close_project
+exit
+INFO: [Common 17-206] Exiting vivado_lab at Sat Mar 17 18:12:19 2018...

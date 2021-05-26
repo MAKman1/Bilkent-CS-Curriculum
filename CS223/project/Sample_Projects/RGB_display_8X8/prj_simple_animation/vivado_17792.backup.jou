@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Dec 18 11:55:00 2018
+# Process ID: 17792
+# Current directory: D:/BilkentBooks/CS223/project/Sample_Projects/RGB_display_8X8/prj_simple_animation
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14312 D:\BilkentBooks\CS223\project\Sample_Projects\RGB_display_8X8\prj_simple_animation\display_8X8.xpr
+# Log file: D:/BilkentBooks/CS223/project/Sample_Projects/RGB_display_8X8/prj_simple_animation/vivado.log
+# Journal file: D:/BilkentBooks/CS223/project/Sample_Projects/RGB_display_8X8/prj_simple_animation\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project -read_only D:/BilkentBooks/CS223/project/Sample_Projects/RGB_display_8X8/prj_simple_animation/display_8X8.xpr
+update_compile_order -fileset sources_1

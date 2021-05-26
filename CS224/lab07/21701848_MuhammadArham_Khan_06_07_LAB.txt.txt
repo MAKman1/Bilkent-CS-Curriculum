@@ -1,0 +1,206 @@
+LAB REPORT
+
+Lab 07
+
+
+MUHAMMAD ARHAM KHAN
+21701848 - CS
+SECTION 06
+SPRING 2019
+
+
+Dated: 15 May, 2019
+
+
+
+Program No 1:
+
+#Muhammad Arham Khan
+#21701848
+#Section 6
+
+.text
+
+#void initspi( void)
+init_spi:	
+		# SPI2CONbits.ON = 0;
+		lui		$t0, 0xBF80
+		ori		$t0, $t0, 0x5A00
+		lw 		$t1, 0($t0)
+		andi		$t1, $t1, 0x7FFF
+		sw		$t1, 0($t0)
+
+		#junk = SPI2BUF;
+		lui		$t2, 0xBF80
+		ori		$t2, $t2, 0x5A20
+		lw		$t3, 0($t2)
+		sw		$t3, junk
+
+		#SPI2BRG = 7;
+		lui		$t3, 0xBF80
+		ori		$t3, $t3, 0x5A30
+		lui		$t4, 7
+		sw		$t4, 0($t3)
+
+		#SPI2CONbits.MSTEN = 1;
+		lw 		$t1, 0($t0)
+		ori		$t1, $t1, 0x0020
+		sw		$t1, 0($t0)
+
+		#SPI2CONbits.CKE = 1;
+		lw 		$t1, 0($t0)
+		ori		$t1, $t1, 0x0100
+		sw		$t1, 0($t0)
+
+#while(!SPI2CONbits.SSEN);
+while:	lw 		$t1, 0($t0)
+		andi		$t1, $t1, 0x0080
+		beq		$t1, $0, while
+
+#SPI2CONbits.ON = 1;
+lw 		$t1, 0($t0)
+		ori		$t1, $t1, 0x8000
+		sw		$t1, 0($t0)
+		jr		$ra
+
+.data
+
+#char junk
+junk		.word
+
+
+
+
+Program No 2:
+#Muhammad Arham Khan
+#21701848
+#Section 6
+
+.text
+
+#int stop = 0;
+sw		$0, stop
+
+#int initial  = 0b01110111;
+lui		$t1, 0x77
+sw		$t1, initial
+
+#int right = 1;
+li		$t2, 1
+sw		$t2, right
+
+#void main(), TRISD = 0x0;
+main:	lui		$t3, 0xBF88
+		ori		$t3, $t3, 0x60C6
+		sw		$0, 0($t3)
+
+		#TRISA = 0b111;
+		lui		$t3, 0xBF88
+		ori		$t3, $t3, 0x6000
+		lui		$t4, 0x7		
+		sw		$t4, 0($t3)
+
+		#PORTD = initial;
+		lui		$t3, 0xBF88
+		ori		$t3, $t3, 0x60D0
+		lw		$t2, initial
+		sw		$t2, 0($t3)
+
+#while(1)
+while:
+		#if(PORTABits.RA1 == 0)
+
+		lui		$t3, 0xBF88
+		ori		$t3, $t3, 0x6010
+		lw		$t4, 0($t3)
+		andi		$t3, $t4, 2
+
+#if(PORTABits.RA1 == 0)
+		beq		$t3, $0, ifPORTABits
+		j		whileContinued
+
+# if(PORTABits.RA1 == 0)		
+ifPORTABits:
+
+	#stop = !stop;
+	lw		$t0, stop
+	nor		$t0, $t0, $t0
+	sw		$t0, stop
+
+	#if(!stop)
+	beq		$t0, $0, ifNotStop1
+	j		whileContinued
+
+#if(!stop)	
+ifNotStop1:
+
+	#PORTD = initial;
+	lui		$t3, 0xBF88
+	ori		$t3, $t3, 0x60D0
+	lw		$t0, initial
+	sw		$t0, 0($t3)
+
+	j	whileContinued
+
+#after the first if condition
+whileContinued:
+	#if(!stop)
+	lw		$t0, stop
+	beq		$t0, $0, ifNotStop2
+
+	#PORTD = 0b11111111;
+	lui		$t3, 0xBF88
+	ori		$t3, $t3, 0x60D0
+	lui		$t4, 0xFF
+	sw		$t4, 0($t3)
+
+	j		delay
+	
+	
+
+
+
+
+
+#if(!stop)	
+ifNotStop2:
+	#lsb = PORTD & 0x1;
+
+	lui		$t3, 0xBF88
+	ori		$t3, $t3, 0x60D0
+	lw		$t4, 0($t3)
+	andi		$t5, $t4, 1
+	sw		$t5, lsb
+
+#mask = lsb << 7;
+
+sll		$t6, $t5, 7
+sw		$t6, mask
+
+
+ 	#PORTD = (PORTD >> 1) | mask;
+	lw		$t1, 0($t3)
+	srl		$t7, $t1, 1
+	lw		$t5, mask
+	or		$t6, $t7, $t5
+	sw		$t6, 0($t3)
+
+	j		delay
+	
+delay:
+	#delay_ms(1000);
+	li $v0, 32
+li $a0, 1000
+syscall
+
+#while(1)
+j	while
+
+.data
+
+#int initial, right, stop, lsb, mask
+intial:		.word
+right:		.word
+stop:		.word
+lsb:			.word
+mask:		.word		

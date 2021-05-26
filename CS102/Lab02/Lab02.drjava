@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20160913-225446">
+  <project autorefresh="false" build="classes/" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="CurrencyList.java" package="" timestamp="27-Feb-2018 12:30:35">
+        <select from="1320" to="1320"/>
+        <scroll column="800" row="0"/>
+      </file>
+      <file name="HTMLFilteredReader.java" package="" timestamp="27-Feb-2018 10:17:35">
+        <select from="1320" to="1320"/>
+        <scroll column="800" row="0"/>
+      </file>
+      <file name="MySimpleURLReader.java" package="" timestamp="27-Feb-2018 10:20:24">
+        <select from="1320" to="1320"/>
+        <scroll column="800" row="0"/>
+      </file>
+      <file name="SuperHTMLFilteredReader.java" package="" timestamp="27-Feb-2018 10:24:02">
+        <select from="1320" to="1320"/>
+        <scroll column="800" row="0"/>
+      </file>
+      <file name="TestProgram.java" package="" timestamp="27-Feb-2018 10:26:49">
+        <select from="1320" to="1320"/>
+        <scroll column="800" row="0"/>
+      </file>
+      <file name="TestSimpleURLReader.java" package="" timestamp="27-Feb-2018 11:18:11">
+        <select from="1320" to="1320"/>
+        <scroll column="800" row="0"/>
+      </file>
+      <file name="TestCurrency.java" package="" timestamp="27-Feb-2018 12:08:02">
+        <select from="1320" to="1320"/>
+        <scroll column="800" row="0"/>
+      </file>
+      <file name="Currency.java" package="" timestamp="27-Feb-2018 12:27:50">
+        <select from="1320" to="1320"/>
+        <scroll column="800" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath>
+      <file absolute="false" name="../cs1.jar"/>
+    </classpath>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>

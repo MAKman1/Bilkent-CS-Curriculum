@@ -1,0 +1,113 @@
+dibs
+
+
+-variable name cannot have _ (only chars, num allowed)
+<newline> ::= \n
+<digit> ::= 0|1|2|3|4|5|6|7|8|9
+<char> ::= A|a|B|c.......
+
+<string> ::= <string><char>|<string><digit>|<char>|<digit>
+<integer> ::= <integer><digit>|<digit>
+
+<var> ::= <string>
+<const> ::= "<string>" | <integer>
+
+<arithmetic_op> ::= +|-|*|/|**|%
+<comparison_op> ::= >|<|>=|<=|==
+<boolean_op> ::= and|or
+<paranthesis> ::= (|)
+
+<expr> ::= <expr> <arithmetic_op> <var> <arithmetic_op> <const>
+		| <expr> <arithmetic_op> <var> <arithmetic_op> <var>
+		| <var> <arithmetic_op> <const>
+		| <var> <arithmetic_op> <var>
+
+<logic_expr> ::= <logic_expr><boolean_op><logic_expr>|<var><comparison_op><var>|<var><comparison_op><const>
+<if_st> ::= if <logic_expr><newline><lines> end
+		| if <logic_expr> <newline> <lines> else <newline> <lines> end
+		| if <logic_expr> <newline> <lines> elseif <newline> <lines> else <newline> <lines> end
+
+<for_loop> ::= for <var> = <integer> to <integer> <newline> <lines> end 
+		| for <var> = <integer> to <var> <newline> <lines> end
+		| for <var> = <var> to <integer> <newline> <lines> end
+		| for <var> = <integer> to <integer> <newline> <lines> end
+
+<while_loop> ::= while <logic_expr> <newline> <lines> end
+
+<comments> ::= # <line>
+		| ## <lines> ##
+
+<multi_params> ::= <multi_params> , <var> | <var>
+<function_def> ::= function <string> ( <multi_params> ) <newline> <lines> end
+<function_call> ::= <string> ( <multi_params> )
+
+<assign_st> ::= <var> = <expr>
+		| <var> = <function_call>
+		| <var> = <connection_receive_st>
+		| <var> = <primitive_func>
+
+<connection_receive_st> ::= connection.receive()
+<connection_st> ::= connect( <string> ) <newline>
+		| disconnect( <string> ) <newline>
+		| connection.send( <integer> ) <newline>
+		| <connection_receive_st>
+
+<primitive_func> ::= getTime()
+			| getLight()
+			| getHumidity()
+			| getTemperature ...
+
+		
+
+ 
+
+
+<lines> ::= <line>
+	|<line><lines>
+<line> ::= <for_loop><newline>
+	|<while_loop><newline>
+	|<if_st><newline>
+	|<assign_st><newline>
+	|<expr><newline>
+	|<comments><newline>
+	|<connection_st><newline>
+	|<function_def><newline>
+	|<newline>
+	
+
+
+
+
+
+
+--------------------
+-case insensitive
+-no statement starters, newline means next statement.
+-replace the following:
+	- 
+- for a = 1 to 10 ..... end
+- while a == 10/ a >= 10 ..... end
+
+-if a >= b ...  else if .... else ... end
+
+- comments: #nwuvcbasdiucbuabdsv or multiline: ##sad uavnsunv
+						sanvjsnvunsfv##
+
+- function getSomething( params) ... return abc .... end
+- getSomething( params)
+
+- +/-/*///**/%/=
+- c=a+b / c=a+b+d / "a+c=b+d : error"
+- variable = "temp"
+
+-variable names: start with small case, have anything else (num or char) abidDBKJN34n is valid.
+
+Connection:::::::::
+- connect( url) / disconnect(url) / "connection"
+-to send or recieve ( connection.isOpen, connection.send( integer), variable = connection.receive()
+
+
+Primitive functions::::::::::::::::::::::::::::::
+getLight() => GET_LIGHT
+getTimestamp() => GET_TIME
+

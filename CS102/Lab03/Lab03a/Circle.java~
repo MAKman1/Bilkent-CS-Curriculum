@@ -1,0 +1,50 @@
+package Lab03a;
+public class Circle extends Shape implements Selectable
+{
+   int radius;
+   boolean selected;
+   
+   public Circle(int radius)
+   {
+      super();
+      this.radius = radius;
+      selected = false;
+   }
+   
+   public double getArea()
+   {
+      return (double) (Math.PI * this.radius * this.radius);
+   }
+   
+   public String toString()
+   {
+      return "Circle (radius: " + this.radius + ", Area: " + this.getArea() + ", selected: " + this.selected  + ", (x, y) = (" + this.getX() + ", " + this.getY() + "))";
+   }
+   
+   public void setSelected( boolean value)
+   {
+      this.selected = value;
+   }
+   
+   public boolean getSelected()
+   {
+      return this.selected;
+   }
+   
+   public Shape contains( int x, int y)
+   {
+      double distance;
+      
+      
+      x = Math.abs(x - this.x);
+      y = Math.abs(y - this.y);
+      distance = Math.sqrt(( x * x) + ( y * y));
+      if( distance <= (double) this.radius)
+      {
+         this.selected = true;
+         return this;
+      }
+      else
+         return null;
+   }
+}

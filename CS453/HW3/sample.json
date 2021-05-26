@@ -1,0 +1,3451 @@
+{
+  'backend_name': 'Jira',
+  'backend_version': '0.14.0',
+  'perceval_version': '0.17.6',
+  'timestamp': 1618681770.503612,
+  'origin': 'https: //jira.atlassian.com/',
+  'uuid': '599350fc116043cec8ecf6edf7be648496680614',
+  'updated_on': 1187654199.0,
+  'classified_fields_filtered': None,
+  'category': 'issue',
+  'search_fields': {
+    'item_id': '56218',
+    'project_id': '11771',
+    'project_key': 'CRUC',
+    'project_name': 'Crucible',
+    'issue_key': 'CRUC-3'
+	},
+  'tag': 'https: //jira.atlassian.com/',
+  'data': {
+    'expand': 'operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields',
+    'id': '56218',
+    'self': 'https: //jira.atlassian.com/rest/api/2/issue/56218',
+    'key': 'CRUC-3',
+    'fields': {
+      'customfield_18232': {
+        'id': 'customfield_18232',
+        'name': 'Confluence Page Id',
+        'value': None
+			},
+      'customfield_20430': {
+        'id': 'customfield_20430',
+        'name': 'Target Release Date',
+        'value': None
+			},
+      'customfield_20031': {
+        'id': 'customfield_20031',
+        'name': 'UTC Timezone Offset',
+        'value': None
+			},
+      'customfield_18230': {
+        'id': 'customfield_18230',
+        'name': 'Public Documentation URL',
+        'value': None
+			},
+      'customfield_18231': {
+        'id': 'customfield_18231',
+        'name': 'Product Space Name',
+        'value': None
+			},
+      'customfield_10590': {
+        'id': 'customfield_10590',
+        'name': 'Complexity',
+        'value': None
+			},
+      'customfield_20030': {
+        'id': 'customfield_20030',
+        'name': 'Product Space Key',
+        'value': None
+			},
+      'customfield_10591': {
+        'id': 'customfield_10591',
+        'name': 'Value',
+        'value': None
+			},
+      'customfield_16732': {
+        'id': 'customfield_16732',
+        'name': 'Review Status',
+        'value': None
+			},
+      'customfield_10350': {
+        'id': 'customfield_10350',
+        'name': 'Accept',
+        'value': None
+			},
+      'customfield_10230': {
+        'id': 'customfield_10230',
+        'name': 'Tool Bar',
+        'value': None
+			},
+      'customfield_16730': {
+        'id': 'customfield_16730',
+        'name': 'Feedback About',
+        'value': None
+			},
+      'customfield_14430': {
+        'id': 'customfield_14430',
+        'name': 'Done Criteria',
+        'value': None
+			},
+      'fixVersions': [
+				{
+          'self': 'https: //jira.atlassian.com/rest/api/2/version/13160',
+          'id': '13160',
+          'description': '',
+          'name': '1.1',
+          'archived': True,
+          'released': True,
+          'releaseDate': '2007-09-17'
+				}
+			],
+      'resolution': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/resolution/1',
+        'id': '1',
+        'description': 'A fix for this issue is checked into the tree and tested.',
+        'name': 'Fixed'
+			},
+      'customfield_11436': {
+        'id': 'customfield_11436',
+        'name': 'Support Rank (Obsolete)',
+        'value': '136478'
+			},
+      'customfield_11435': {
+        'id': 'customfield_11435',
+        'name': 'Studio Rank',
+        'value': '136478'
+			},
+      'customfield_11437': {
+        'id': 'customfield_11437',
+        'name': 'JIRA Support Rank (Obsolete)',
+        'value': '136280'
+			},
+      'customfield_17130': {
+        'id': 'customfield_17130',
+        'name': 'Symptom Severity',
+        'value': None
+			},
+      'lastViewed': None,
+      'customfield_17531': {
+        'id': 'customfield_17531',
+        'name': 'Do you plan to migrate to new Portfolio plans within the next 3 months?',
+        'value': None
+			},
+      'customfield_10180': {
+        'id': 'customfield_10180',
+        'name': 'Issue Key Searcher',
+        'value': None
+			},
+      'customfield_17530': {
+        'id': 'customfield_17530',
+        'name': "Have you used Portfolio for JIRA's new 2.0 plans?",
+        'value': None
+			},
+      'customfield_17930': {
+        'id': 'customfield_17930',
+        'name': 'Unique Views',
+        'value': None
+			},
+      'priority': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/priority/3',
+        'iconUrl': 'https: //jira.atlassian.com/images/icons/priorities/medium.svg',
+        'name': 'Medium',
+        'id': '3'
+			},
+      'customfield_11431': {
+        'id': 'customfield_11431',
+        'name': 'Rank (Obsolete)',
+        'value': '138747'
+			},
+      'customfield_11434': {
+        'id': 'customfield_11434',
+        'name': 'Bugmaster Rank',
+        'value': '136227'
+			},
+      'customfield_17933': {
+        'id': 'customfield_17933',
+        'name': 'Flaky Count',
+        'value': None
+			},
+      'labels': [],
+      'customfield_11433': {
+        'id': 'customfield_11433',
+        'name': 'Backlog Order (Obsolete)',
+        'value': '128206'
+			},
+      'customfield_10610': {
+        'id': 'customfield_10610',
+        'name': 'Support reference count',
+        'value': None
+			},
+      'aggregatetimeoriginalestimate': None,
+      'timeestimate': None,
+      'versions': [],
+      'customfield_20934': {
+        'id': 'customfield_20934',
+        'name': 'Please share any other thoughts here:',
+        'value': None
+			},
+      'issuelinks': [],
+      'customfield_20932': {
+        'id': 'customfield_20932',
+        'name': "What's preventing you from migrating to the Improved interface?",
+        'value': None
+			},
+      'customfield_20933': {
+        'id': 'customfield_20933',
+        'name': 'What, if any, features are missing from the Improved experience?',
+        'value': None
+			},
+      'assignee': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+        'name': 'mquail',
+        'key': 'mquail',
+        'avatarUrls': {
+          '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+          '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+          '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+          '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+				},
+        'displayName': 'Matt Quail',
+        'active': False,
+        'timeZone': 'Australia/Sydney'
+			},
+      'customfield_20930': {
+        'id': 'customfield_20930',
+        'name': 'Have you used the new improved experience?',
+        'value': None
+			},
+      'customfield_20931': {
+        'id': 'customfield_20931',
+        'name': 'Do you intend to migrate to the new experience in the next 6 months?',
+        'value': None
+			},
+      'status': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/status/6',
+        'description': "Work on this issue is complete.\r\n\r\nIf it’s fixed in a Server product, the resolution will be ‘Fixed’ and the Fix Version field will indicate the product version that contains the fix.\r\n\r\nIf no code changes were required, the resolution will be ‘Duplicate', 'Won't fix', 'Handled by support', 'Timed out', or similar.",
+        'iconUrl': 'https: //jira.atlassian.com/images/icons/statuses/closed.png',
+        'name': 'Closed',
+        'id': '6',
+        'statusCategory': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/statuscategory/3',
+          'id': 3,
+          'key': 'done',
+          'colorName': 'green',
+          'name': 'Done'
+				}
+			},
+      'customfield_20530': {
+        'id': 'customfield_20530',
+        'name': 'PC Ticket',
+        'value': None
+			},
+      'customfield_16030': {
+        'id': 'customfield_16030',
+        'name': 'Development Effort',
+        'value': None
+			},
+      'components': [],
+      'customfield_18730': {
+        'id': 'customfield_18730',
+        'name': 'Development',
+        'value': '{}'
+			},
+      'customfield_20131': {
+        'id': 'customfield_20131',
+        'name': 'Fixed in Long Term Support Release/s',
+        'value': None
+			},
+      'customfield_14130': {
+        'id': 'customfield_14130',
+        'name': 'Regular Expression',
+        'value': None
+			},
+      'customfield_12231': {
+        'id': 'customfield_12231',
+        'name': 'Tested By',
+        'value': None
+			},
+      'customfield_14532': {
+        'id': 'customfield_14532',
+        'name': 'Stash Bug Message Test',
+        'value': None
+			},
+      'customfield_12230': {
+        'id': 'customfield_12230',
+        'name': 'Developed By',
+        'value': None
+			},
+      'customfield_10571': {
+        'id': 'customfield_10571',
+        'name': 'Story Points',
+        'value': None
+			},
+      'customfield_18731': {
+        'id': 'customfield_18731',
+        'name': 'Banana PM Suggestion',
+        'value': None
+			},
+      'customfield_12630': {
+        'id': 'customfield_12630',
+        'name': 'CVSS Score',
+        'value': None
+			},
+      'customfield_10575': {
+        'id': 'customfield_10575',
+        'name': 'Regular Expression - old',
+        'value': None
+			},
+      'customfield_11930': {
+        'id': 'customfield_11930',
+        'name': 'Sprint',
+        'value': None
+			},
+      'aggregatetimeestimate': None,
+      'customfield_17230': {
+        'id': 'customfield_17230',
+        'name': 'UIS',
+        'value': None
+			},
+      'creator': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/user?username=ahempel',
+        'name': 'ahempel',
+        'key': 'ahempel',
+        'avatarUrls': {
+          '48x48': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=48',
+          '24x24': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=24',
+          '16x16': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=16',
+          '32x32': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=32'
+				},
+        'displayName': 'Adrian Hempel [Atlassian
+				]',
+        'active': True,
+        'timeZone': 'Australia/Sydney'
+			},
+      'customfield_17630': {
+        'id': 'customfield_17630',
+        'name': 'Team',
+        'value': None
+			},
+      'customfield_20240': {
+        'id': 'customfield_20240',
+        'name': 'Blocked from migrating',
+        'value': None
+			},
+      'customfield_15331': {
+        'id': 'customfield_15331',
+        'name': 'Quality Assistance',
+        'value': None
+			},
+      'customfield_20241': {
+        'id': 'customfield_20241',
+        'name': 'Churned',
+        'value': None
+			},
+      'subtasks': [],
+      'customfield_10160': {
+        'id': 'customfield_10160',
+        'name': 'Last commented',
+        'value': '430963200'
+			},
+      'customfield_10161': {
+        'id': 'customfield_10161',
+        'name': 'Last commented by user?',
+        'value': 'false'
+			},
+      'customfield_11130': {
+        'id': 'customfield_11130',
+        'name': 'Global Rank (Obsolete)',
+        'value': '56629'
+			},
+      'customfield_13430': {
+        'id': 'customfield_13430',
+        'name': 'Effort',
+        'value': None
+			},
+      'customfield_10680': {
+        'id': 'customfield_10680',
+        'name': 'Release Version History',
+        'value': None
+			},
+      'customfield_10681': {
+        'id': 'customfield_10681',
+        'name': 'Current Status',
+        'value': None
+			},
+      'reporter': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/user?username=ahempel',
+        'name': 'ahempel',
+        'key': 'ahempel',
+        'avatarUrls': {
+          '48x48': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=48',
+          '24x24': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=24',
+          '16x16': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=16',
+          '32x32': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=32'
+				},
+        'displayName': 'Adrian Hempel [Atlassian
+				]',
+        'active': True,
+        'timeZone': 'Australia/Sydney'
+			},
+      'customfield_17631': {
+        'id': 'customfield_17631',
+        'name': 'Parent Link',
+        'value': None
+			},
+      'aggregateprogress': {
+        'progress': 0,
+        'total': 0
+			},
+      'progress': {
+        'progress': 0,
+        'total': 0
+			},
+      'customfield_20239': {
+        'id': 'customfield_20239',
+        'name': 'Bug/Suggestion Type',
+        'value': None
+			},
+      'votes': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/issue/CRUC-3/votes',
+        'votes': 0,
+        'hasVoted': False
+			},
+      'customfield_20237': {
+        'id': 'customfield_20237',
+        'name': 'Partners',
+        'value': None
+			},
+      'customfield_20238': {
+        'id': 'customfield_20238',
+        'name': 'Interested Team/s',
+        'value': None
+			},
+      'customfield_20631': {
+        'id': 'customfield_20631',
+        'name': 'CVE ID',
+        'value': None
+			},
+      'customfield_20632': {
+        'id': 'customfield_20632',
+        'name': 'Next Review and Update',
+        'value': None
+			},
+      'customfield_20236': {
+        'id': 'customfield_20236',
+        'name': 'Total NB Contacts Collected',
+        'value': None
+			},
+      'customfield_18430': {
+        'id': 'customfield_18430',
+        'name': 'Feature',
+        'value': None
+			},
+      'customfield_20233': {
+        'id': 'customfield_20233',
+        'name': 'Shirt Size',
+        'value': None
+			},
+      'issuetype': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/issuetype/1',
+        'id': '1',
+        'description': 'A problem which impairs or prevents the functions of the product.',
+        'iconUrl': 'https: //jira.atlassian.com/secure/viewavatar?size=xsmall&avatarId=51493&avatarType=issuetype',
+        'name': 'Bug',
+        'subtask': False,
+        'avatarId': 51493
+			},
+      'customfield_20630': {
+        'id': 'customfield_20630',
+        'name': 'CVSS Severity',
+        'value': None
+			},
+      'customfield_20234': {
+        'id': 'customfield_20234',
+        'name': 'Prioritization',
+        'value': None
+			},
+      'customfield_20231': {
+        'id': 'customfield_20231',
+        'name': 'R1 Due',
+        'value': None
+			},
+      'customfield_20232': {
+        'id': 'customfield_20232',
+        'name': 'Market Group Requested by',
+        'value': None
+			},
+      'customfield_16530': {
+        'id': 'customfield_16530',
+        'name': 'Target deployment',
+        'value': None
+			},
+      'customfield_18030': {
+        'id': 'customfield_18030',
+        'name': 'Expected Result',
+        'value': None
+			},
+      'customfield_18031': {
+        'id': 'customfield_18031',
+        'name': 'Actual Result',
+        'value': None
+			},
+      'customfield_20230': {
+        'id': 'customfield_20230',
+        'name': 'Approvers',
+        'value': None
+			},
+      'timespent': None,
+      'customfield_10150': {
+        'id': 'customfield_10150',
+        'name': 'Participants',
+        'value': [
+          'ahempel(ahempel)',
+          'mquail(mquail)'
+				]
+			},
+      'customfield_16930': {
+        'id': 'customfield_16930',
+        'name': 'Hypothesis',
+        'value': None
+			},
+      'project': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/project/11771',
+        'id': '11771',
+        'key': 'CRUC',
+        'name': 'Crucible',
+        'projectTypeKey': 'software',
+        'avatarUrls': {
+          '48x48': 'https: //jira.atlassian.com/secure/projectavatar?pid=11771&avatarId=105292',
+          '24x24': 'https: //jira.atlassian.com/secure/projectavatar?size=small&pid=11771&avatarId=105292',
+          '16x16': 'https: //jira.atlassian.com/secure/projectavatar?size=xsmall&pid=11771&avatarId=105292',
+          '32x32': 'https: //jira.atlassian.com/secure/projectavatar?size=medium&pid=11771&avatarId=105292'
+				},
+        'projectCategory': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/projectCategory/10031',
+          'id': '10031',
+          'description': '',
+          'name': 'Atlassian Products'
+				}
+			},
+      'customfield_16532': {
+        'id': 'customfield_16532',
+        'name': 'Engineering contact',
+        'value': None
+			},
+      'customfield_16531': {
+        'id': 'customfield_16531',
+        'name': 'Release notes',
+        'value': None
+			},
+      'customfield_18830': {
+        'id': 'customfield_18830',
+        'name': 'EIS',
+        'value': None
+			},
+      'aggregatetimespent': None,
+      'customfield_16933': {
+        'id': 'customfield_16933',
+        'name': 'Result',
+        'value': None
+			},
+      'customfield_18831': {
+        'id': 'customfield_18831',
+        'name': 'Request Participants',
+        'value': None
+			},
+      'customfield_16932': {
+        'id': 'customfield_16932',
+        'name': 'Deployment Type',
+        'value': None
+			},
+      'customfield_16535': {
+        'id': 'customfield_16535',
+        'name': 'Server applicable?',
+        'value': None
+			},
+      'resolutiondate': '2007-08-20T23: 56: 39.000+0000',
+      'workratio': -1,
+      'watches': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/issue/CRUC-3/watchers',
+        'watchCount': 0,
+        'isWatching': False
+			},
+      'customfield_17333': {
+        'id': 'customfield_17333',
+        'name': "What's the main reason you're currently using Classic plans?",
+        'value': None
+			},
+      'customfield_19230': {
+        'id': 'customfield_19230',
+        'name': 'Target start',
+        'value': None
+			},
+      'customfield_15430': {
+        'id': 'customfield_15430',
+        'name': 'HipChat Team',
+        'value': None
+			},
+      'customfield_19231': {
+        'id': 'customfield_19231',
+        'name': 'Target end',
+        'value': None
+			},
+      'created': '2007-08-15T05: 04: 14.000+0000',
+      'customfield_19232': {
+        'id': 'customfield_19232',
+        'name': 'Original story points',
+        'value': None
+			},
+      'customfield_15830': {
+        'id': 'customfield_15830',
+        'name': 'Occurrence Factor',
+        'value': None
+			},
+      'customfield_17335': {
+        'id': 'customfield_17335',
+        'name': 'If you have any other thoughts please share them here:',
+        'value': None
+			},
+      'customfield_17334': {
+        'id': 'customfield_17334',
+        'name': 'What, if any, Classic plan features are missing from new plans that are essential for your work?',
+        'value': None
+			},
+      'customfield_11631': {
+        'id': 'customfield_11631',
+        'name': 'Themes',
+        'value': None
+			},
+      'customfield_12833': {
+        'id': 'customfield_12833',
+        'name': 'Task Points',
+        'value': None
+			},
+      'customfield_12832': {
+        'id': 'customfield_12832',
+        'name': 'SupportRank (Obsolete)',
+        'value': None
+			},
+      'customfield_14735': {
+        'id': 'customfield_14735',
+        'name': 'Support Rank',
+        'value': '1|hwvy2v:'
+			},
+      'updated': '2007-08-20T23: 56: 39.000+0000',
+      'customfield_20730': {
+        'id': 'customfield_20730',
+        'name': 'Partners',
+        'value': None
+			},
+      'customfield_20333': {
+        'id': 'customfield_20333',
+        'name': 'Label message',
+        'value': '<div class="aui-message">\r\n<p>\r\n<b>Customers Impacted</b><br><br>\r\n\r\nUse the fields below to denote which customer wants this feature.<br>\r\n<b>Labels</b> =  an interested customer<br>\r\n<b>Blocked from migrating</b> = a customer blocked from migrating to cloud till this feature is available<br>\r\n<b>Churned</b> = a customer that has churned from Cloud due to the unavailability of this feature.<br>\r\n<b>Partners</b> = a partner who provided this feedback as impacting their customers. If they mentioned customers, the customer names should be added to one of the above mentioned labels.<br><br>\r\n\r\n<i>For accuracy of reporting please use the customer domain. eg: for Amazon as the customer, add the label amazon.com<i>\r\n</p>\r\n<span class="aui-icon icon-info"></span>\r\n</div>'
+			},
+      'customfield_20330': {
+        'id': 'customfield_20330',
+        'name': 'Enterprise Customers',
+        'value': None
+			},
+      'customfield_18130': {
+        'id': 'customfield_18130',
+        'name': 'URL',
+        'value': None
+			},
+      'customfield_14330': {
+        'id': 'customfield_14330',
+        'name': 'T-Shirt Size',
+        'value': None
+			},
+      'timeoriginalestimate': None,
+      'customfield_10250': {
+        'id': 'customfield_10250',
+        'name': 'Support Request Message (IssueType:Bug)',
+        'value': '<div id="support-bug-request-msg" class="aui-message aui-message-info"> <b>Help us fix bugs faster</b> <br> <br>To help us get the right details and fix bugs as quickly as possible, submit your bug report in our <a href="http://support.atlassian.com/contact" class="bugfix-support">support system</a>. <br> <br> You can still view, watch, comment on, and vote for <a href="https://jira.atlassian.com/secure/Dashboard.jspa?selectPageId=10440" target="_blank" rel="noopener">existing bugs</a>. <br><br> <a class="aui-button aui-button-primary bugfix-support" href="http://support.atlassian.com/contact" resolved="">Report a new bug</a> <a class="aui-button bugfix-search" href="https://jira.atlassian.com/issues/?jql=issuetype=Bug+AND+project=CRUC" resolved="">Search for an existing bug</a> <br> </div>'
+			},
+      'description': 'I created this [review|https: //svn.atlassian.com/privateeye/cru/CR-66] from three changesets on a single branch in Subversion.\r\n\r\nHowever, [this diff|https://svn.atlassian.com/privateeye/cru/CR-66/viewfile/CFR-407] is showing changes on the trunk.\r\n\r\nI would have expected this to be a [diff between revisions 44275 and 44646|https://svn.atlassian.com/privateeye/browse/private/atlassian/bamboo/trunk/pom.xml?r1=44275&r2=44646].',
+      'customfield_16632': {
+        'id': 'customfield_16632',
+        'name': 'Page Path',
+        'value': None
+				},
+      'customfield_16630': {
+        'id': 'customfield_16630',
+        'name': 'Project Type',
+        'value': None
+				},
+      'customfield_10650': {
+        'id': 'customfield_10650',
+        'name': 'Flagged',
+        'value': None
+				},
+      'customfield_14733': {
+        'id': 'customfield_14733',
+        'name': 'Global Rank',
+        'value': '2|hwjeo7:'
+				},
+      'customfield_10530': {
+        'id': 'customfield_10530',
+        'name': 'Tester',
+        'value': None
+				},
+      'customfield_14734': {
+        'id': 'customfield_14734',
+        'name': 'JIRA Support Rank',
+        'value': '1|hwvwvj:'
+				},
+      'customfield_10651': {
+        'id': 'customfield_10651',
+        'name': 'Epic/Theme',
+        'value': None
+				},
+      'customfield_18931': {
+        'id': 'customfield_18931',
+        'name': 'Add-on Type',
+        'value': None
+				},
+      'customfield_12831': {
+        'id': 'customfield_12831',
+        'name': 'Support Points',
+        'value': None
+				},
+      'customfield_14731': {
+        'id': 'customfield_14731',
+        'name': 'Rank',
+        'value': '1|hx0fsv:'
+				},
+      'customfield_18932': {
+        'id': 'customfield_18932',
+        'name': 'Original Estimate',
+        'value': None
+				},
+      'customfield_10653': {
+        'id': 'customfield_10653',
+        'name': 'Story Points',
+        'value': None
+				},
+      'customfield_14732': {
+        'id': 'customfield_14732',
+        'name': 'Backlog Order',
+        'value': '1|hwupjz:'
+				},
+      'customfield_12830': {
+        'id': 'customfield_12830',
+        'name': 'Ratio',
+        'value': None
+				},
+      'summary': 'Crucible incorrectly creates diff between different Subversion branches',
+      'customfield_17432': {
+        'id': 'customfield_17432',
+        'name': 'Health Monitor',
+        'value': None
+				},
+      'customfield_17431': {
+        'id': 'customfield_17431',
+        'name': 'Team',
+        'value': None
+				},
+      'customfield_19330': {
+        'id': 'customfield_19330',
+        'name': 'Bug Fix Policy',
+        'value': '<a href="https://confluence.atlassian.com/support/atlassian-bug-fixing-policy-201294573.html" target="_blank" rel="noopener"> View Atlassian Server bug fix policy</a>'
+				},
+      'customfield_13230': {
+        'id': 'customfield_13230',
+        'name': 'Date of First Response',
+        'value': '2007-08-20T00: 07: 50.392+0000'
+				},
+      'customfield_15532': {
+        'id': 'customfield_15532',
+        'name': 'Performance Gain',
+        'value': None
+				},
+      'customfield_17831': {
+        'id': 'customfield_17831',
+        'name': 'Reason',
+        'value': None
+				},
+      'customfield_13231': {
+        'id': 'customfield_13231',
+        'name': 'Time in Status',
+        'value': '1_*:*_1_*:*_499944248_*|*_6_*:*_1_*:*_0'
+				},
+      'customfield_17830': {
+        'id': 'customfield_17830',
+        'name': 'Splunk query to find customers impacted by this bug',
+        'value': None
+				},
+      'customfield_15530': {
+        'id': 'customfield_15530',
+        'name': 'Server / Client',
+        'value': None
+				},
+      'customfield_17433': {
+        'id': 'customfield_17433',
+        'name': 'Play',
+        'value': None
+				},
+      'customfield_15932': {
+        'id': 'customfield_15932',
+        'name': 'When is this event fired?',
+        'value': None
+				},
+      'customfield_15930': {
+        'id': 'customfield_15930',
+        'name': 'Implemented in HipChat Clients',
+        'value': None
+				},
+      'customfield_15931': {
+        'id': 'customfield_15931',
+        'name': 'Questions you want to answer',
+        'value': None
+				},
+      'customfield_11730': {
+        'id': 'customfield_11730',
+        'name': 'Risk',
+        'value': None
+				},
+      'customfield_12931': {
+        'id': 'customfield_12931',
+        'name': 'Epic Link',
+        'value': None
+				},
+      'environment': None,
+      'duedate': None,
+      'customfield_20831': {
+        'id': 'customfield_20831',
+        'name': 'System/UI Changes',
+        'value': None
+				},
+      'customfield_20830': {
+        'id': 'customfield_20830',
+        'name': 'Does fix include system behavior or UI changes?',
+        'value': None
+				}
+			},
+    'renderedFields': {
+      'customfield_18232': '',
+      'customfield_20430': None,
+      'customfield_20031': None,
+      'customfield_18230': None,
+      'customfield_18231': '',
+      'customfield_10590': None,
+      'customfield_20030': '',
+      'customfield_10591': None,
+      'customfield_16732': None,
+      'customfield_10350': None,
+      'customfield_10230': None,
+      'customfield_16730': None,
+      'customfield_14430': '',
+      'fixVersions': None,
+      'resolution': None,
+      'customfield_11436': None,
+      'customfield_11435': None,
+      'customfield_11437': None,
+      'customfield_17130': None,
+      'lastViewed': None,
+      'customfield_17531': None,
+      'customfield_10180': None,
+      'customfield_17530': None,
+      'customfield_17930': None,
+      'priority': None,
+      'customfield_11431': None,
+      'customfield_11434': None,
+      'customfield_17933': None,
+      'labels': None,
+      'customfield_11433': None,
+      'customfield_10610': None,
+      'aggregatetimeoriginalestimate': None,
+      'timeestimate': None,
+      'versions': None,
+      'customfield_20934': '',
+      'issuelinks': None,
+      'customfield_20932': '',
+      'customfield_20933': '',
+      'assignee': None,
+      'customfield_20930': None,
+      'customfield_20931': None,
+      'status': None,
+      'customfield_20530': None,
+      'customfield_16030': None,
+      'components': None,
+      'customfield_18730': None,
+      'customfield_20131': '',
+      'customfield_14130': None,
+      'customfield_12231': None,
+      'customfield_14532': None,
+      'customfield_12230': None,
+      'customfield_10571': None,
+      'customfield_18731': None,
+      'customfield_12630': None,
+      'customfield_10575': '',
+      'customfield_11930': None,
+      'aggregatetimeestimate': None,
+      'customfield_17230': None,
+      'creator': None,
+      'customfield_17630': None,
+      'customfield_20240': None,
+      'customfield_15331': None,
+      'customfield_20241': None,
+      'subtasks': None,
+      'customfield_10160': None,
+      'customfield_10161': None,
+      'customfield_11130': None,
+      'customfield_13430': None,
+      'customfield_10680': None,
+      'customfield_10681': '',
+      'reporter': None,
+      'customfield_17631': None,
+      'aggregateprogress': None,
+      'progress': None,
+      'customfield_20239': None,
+      'votes': None,
+      'customfield_20237': '',
+      'customfield_20238': None,
+      'customfield_20631': '',
+      'customfield_20632': None,
+      'customfield_20236': None,
+      'customfield_18430': None,
+      'customfield_20233': None,
+      'issuetype': None,
+      'customfield_20630': None,
+      'customfield_20234': None,
+      'customfield_20231': None,
+      'customfield_20232': None,
+      'customfield_16530': '',
+      'customfield_18030': '',
+      'customfield_18031': '',
+      'customfield_20230': None,
+      'timespent': None,
+      'customfield_10150': None,
+      'customfield_16930': '',
+      'project': None,
+      'customfield_16532': None,
+      'customfield_16531': '',
+      'customfield_18830': None,
+      'aggregatetimespent': None,
+      'customfield_16933': None,
+      'customfield_18831': None,
+      'customfield_16932': None,
+      'customfield_16535': None,
+      'resolutiondate': '20/Aug/2007 11: 56 PM',
+      'workratio': None,
+      'watches': None,
+      'customfield_17333': '',
+      'customfield_19230': None,
+      'customfield_15430': None,
+      'customfield_19231': None,
+      'created': '15/Aug/2007 5: 04 AM',
+      'customfield_19232': None,
+      'customfield_15830': None,
+      'customfield_17335': '',
+      'customfield_17334': '',
+      'customfield_11631': None,
+      'customfield_12833': None,
+      'customfield_12832': None,
+      'customfield_14735': None,
+      'updated': '20/Aug/2007 11: 56 PM',
+      'customfield_20730': None,
+      'customfield_20333': None,
+      'customfield_20330': None,
+      'customfield_18130': '',
+      'customfield_14330': None,
+      'timeoriginalestimate': None,
+      'customfield_10250': None,
+      'description': '<p>I created this <a href="https://svn.atlassian.com/privateeye/cru/CR-66" class="external-link" target="_blank" rel="nofollow noopener">review</a> from three changesets on a single branch in Subversion.</p>\n\n<p>However, <a href="https://svn.atlassian.com/privateeye/cru/CR-66/viewfile/CFR-407" class="external-link" target="_blank" rel="nofollow noopener">this diff</a> is showing changes on the trunk.</p>\n\n<p>I would have expected this to be a <a href="https://svn.atlassian.com/privateeye/browse/private/atlassian/bamboo/trunk/pom.xml?r1=44275&amp;r2=44646" class="external-link" target="_blank" rel="nofollow noopener">diff between revisions 44275 and 44646</a>.</p>',
+      'customfield_16632': '',
+      'customfield_16630': None,
+      'customfield_10650': None,
+      'customfield_14733': None,
+      'customfield_10530': None,
+      'customfield_14734': None,
+      'customfield_10651': None,
+      'customfield_18931': None,
+      'customfield_12831': None,
+      'customfield_14731': None,
+      'customfield_18932': None,
+      'customfield_10653': None,
+      'customfield_14732': None,
+      'customfield_12830': '',
+      'summary': None,
+      'customfield_17432': None,
+      'customfield_17431': None,
+      'customfield_19330': None,
+      'customfield_13230': '20/Aug/2007 12: 07 AM',
+      'customfield_15532': '',
+      'customfield_17831': None,
+      'customfield_13231': None,
+      'customfield_17830': '',
+      'customfield_15530': None,
+      'customfield_17433': None,
+      'customfield_15932': '',
+      'customfield_15930': None,
+      'customfield_15931': '',
+      'customfield_11730': None,
+      'customfield_12931': None,
+      'environment': '',
+      'duedate': None,
+      'customfield_20831': '',
+      'customfield_20830': None
+			},
+    'transitions': [],
+    'operations': {
+      'linkGroups': [
+					{
+          'id': 'view.issue.opsbar',
+          'links': [],
+          'groups': [
+							{
+              'id': 'ops-login-lnk_container',
+              'links': [
+									{
+                  'id': 'ops-login-lnk',
+                  'label': 'Log In',
+                  'title': 'Log In',
+                  'href': '/login.jsp?os_destination=%2Frest%2Fapi%2F2%2Fsearch%3Fjql%3Dproject%2B%253D%2BCRUC%2BAND%2Bupdated%2B%253E%2B0%2Border%2Bby%2Bupdated%2Basc%26startAt%3D0%26expand%3DrenderedFields%252Ctransitions%252Coperations%252Cchangelog%26maxResults%3D100'
+									}
+								],
+              'groups': []
+							},
+							{
+              'id': 'opsbar-operations',
+              'weight': 10,
+              'links': [],
+              'groups': [
+									{
+                  'header': {
+                    'id': 'opsbar-operations_more',
+                    'label': 'More'
+										},
+                  'links': [],
+                  'groups': []
+									}
+								]
+							},
+							{
+              'id': 'opsbar-transitions',
+              'weight': 20,
+              'links': [],
+              'groups': [
+									{
+                  'header': {
+                    'id': 'opsbar-transitions_more',
+                    'label': 'Workflow'
+										},
+                  'links': [],
+                  'groups': []
+									}
+								]
+							},
+							{
+              'id': 'opsbar-admin',
+              'weight': 30,
+              'links': [],
+              'groups': [
+									{
+                  'header': {
+                    'id': 'opsbar-admin_more',
+                    'label': 'Admin'
+										},
+                  'links': [],
+                  'groups': []
+									}
+								]
+							},
+							{
+              'id': 'opsbar-restore',
+              'weight': 40,
+              'links': [],
+              'groups': [
+									{
+                  'header': {
+                    'id': 'opsbar-restore_more',
+                    'label': 'Restore Issue'
+										},
+                  'links': [],
+                  'groups': []
+									}
+								]
+							}
+						]
+					},
+					{
+          'id': 'jira.issue.tools',
+          'links': [],
+          'groups': [
+							{
+              'id': 'view.issue.exports',
+              'header': {
+                'id': 'viewissue-export',
+                'iconClass': 'icon-default aui-icon aui-icon-small aui-iconfont-export',
+                'label': 'Export',
+                'title': 'Export this issue in another format'
+								},
+              'links': [
+									{
+                  'id': 'jira.issueviews:issue-xml',
+                  'label': 'XML',
+                  'href': '/si/jira.issueviews:issue-xml/CRUC-3/CRUC-3.xml'
+									},
+									{
+                  'id': 'jira.issueviews:issue-word',
+                  'label': 'Word',
+                  'href': '/si/jira.issueviews:issue-word/CRUC-3/CRUC-3.doc'
+									},
+									{
+                  'id': 'jira.issueviews:issue-html',
+                  'label': 'Printable',
+                  'href': '/si/jira.issueviews:issue-html/CRUC-3/CRUC-3.html'
+									}
+								],
+              'groups': []
+							}
+						]
+					}
+				]
+			},
+    'changelog': {
+      'startAt': 0,
+      'maxResults': 11,
+      'total': 11,
+      'histories': [
+					{
+          'id': '128715',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=tim%40atlassian.com',
+            'name': 'tim@atlassian.com',
+            'key': 'tim@atlassian.com',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=tim%40atlassian.com&avatarId=2465661',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=tim%40atlassian.com&avatarId=2465661',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=tim%40atlassian.com&avatarId=2465661',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=tim%40atlassian.com&avatarId=2465661'
+							},
+            'displayName': 'TimP',
+            'active': True,
+            'timeZone': 'America/Los_Angeles'
+						},
+          'created': '2007-08-16T01: 04: 50.363+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '85857',
+              'fromString': 'jira',
+              'to': '85902',
+              'toString': 'JIRA Bug Workflow v2'
+							}
+						]
+					},
+					{
+          'id': '129276',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+            'name': 'mquail',
+            'key': 'mquail',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+							},
+            'displayName': 'Matt Quail',
+            'active': False,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2007-08-20T23: 56: 39.154+0000',
+          'items': [
+							{
+              'field': 'Fix Version',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '13160',
+              'toString': '1.1'
+							},
+							{
+              'field': 'resolution',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '1',
+              'toString': 'Fixed'
+							},
+							{
+              'field': 'status',
+              'fieldtype': 'jira',
+              'from': '1',
+              'fromString': 'Open',
+              'to': '6',
+              'toString': 'Closed'
+							}
+						]
+					},
+					{
+          'id': '176231',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+            'name': 'mquail',
+            'key': 'mquail',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+							},
+            'displayName': 'Matt Quail',
+            'active': False,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2008-01-07T05: 11: 24.572+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '85902',
+              'fromString': 'JIRA Bug Workflow v2',
+              'to': '119926',
+              'toString': 'reviewflow'
+							}
+						]
+					},
+					{
+          'id': '252131',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=bhumphreys',
+            'name': 'bhumphreys',
+            'key': 'bhumphreys',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=bhumphreys&avatarId=2461365',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=bhumphreys&avatarId=2461365',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=bhumphreys&avatarId=2461365',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=bhumphreys&avatarId=2461365'
+							},
+            'displayName': 'BrendanA',
+            'active': True,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2009-01-27T23: 15: 20.924+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '119926',
+              'fromString': 'reviewflow',
+              'to': '152082',
+              'toString': 'review flow with triage'
+							}
+						]
+					},
+					{
+          'id': '253550',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=bhumphreys',
+            'name': 'bhumphreys',
+            'key': 'bhumphreys',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=bhumphreys&avatarId=2461365',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=bhumphreys&avatarId=2461365',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=bhumphreys&avatarId=2461365',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=bhumphreys&avatarId=2461365'
+							},
+            'displayName': 'BrendanA',
+            'active': True,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2009-01-27T23: 53: 20.066+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '152082',
+              'fromString': 'review flow with triage',
+              'to': '153476',
+              'toString': 'Copy of review flow with triage'
+							}
+						]
+					},
+					{
+          'id': '255814',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=bhumphreys',
+            'name': 'bhumphreys',
+            'key': 'bhumphreys',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=bhumphreys&avatarId=2461365',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=bhumphreys&avatarId=2461365',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=bhumphreys&avatarId=2461365',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=bhumphreys&avatarId=2461365'
+							},
+            'displayName': 'BrendanA',
+            'active': True,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2009-01-28T00: 12: 21.590+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '153476',
+              'fromString': 'Copy of review flow with triage',
+              'to': '155723',
+              'toString': 'Simple review flow with triage'
+							}
+						]
+					},
+					{
+          'id': '638670',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=sruiz',
+            'name': 'sruiz',
+            'key': 'sruiz',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=sruiz&avatarId=2481743',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=sruiz&avatarId=2481743',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=sruiz&avatarId=2481743',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=sruiz&avatarId=2481743'
+							},
+            'displayName': 'Seb Ruiz',
+            'active': False,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2011-07-15T00: 01: 02.824+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '155723',
+              'fromString': 'Simple review flow with triage',
+              'to': '312590',
+              'toString': 'FECRU Development Workflow (Triage)'
+							}
+						]
+					},
+					{
+          'id': '2646799',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=pswiecicki',
+            'name': 'pswiecicki',
+            'key': 'pswiecicki',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=pswiecicki&avatarId=5805639',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=pswiecicki&avatarId=5805639',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=pswiecicki&avatarId=5805639',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=pswiecicki&avatarId=5805639'
+							},
+            'displayName': 'Piotr Swiecicki',
+            'active': True,
+            'timeZone': 'Europe/Warsaw'
+						},
+          'created': '2015-08-17T13: 40: 35.660+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '312590',
+              'fromString': 'FECRU Development Workflow (Triage)',
+              'to': '937478',
+              'toString': 'FECRU Development Workflow - Triage'
+							}
+						]
+					},
+					{
+          'id': '3853846',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=osanico',
+            'name': 'osanico',
+            'key': 'osanico',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=osanico&avatarId=5780008',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=osanico&avatarId=5780008',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=osanico&avatarId=5780008',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=osanico&avatarId=5780008'
+							},
+            'displayName': 'Owen',
+            'active': True,
+            'timeZone': 'Asia/Manila'
+						},
+          'created': '2016-07-07T06: 36: 31.551+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '937478',
+              'fromString': 'FECRU Development Workflow - Triage',
+              'to': '1514212',
+              'toString': 'FECRU Development Workflow - Triage - Restricted'
+							}
+						]
+					},
+					{
+          'id': '8228412',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=osanico',
+            'name': 'osanico',
+            'key': 'osanico',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=osanico&avatarId=5780008',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=osanico&avatarId=5780008',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=osanico&avatarId=5780008',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=osanico&avatarId=5780008'
+							},
+            'displayName': 'Owen',
+            'active': True,
+            'timeZone': 'Asia/Manila'
+						},
+          'created': '2018-10-16T04: 40: 57.408+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '1514212',
+              'fromString': 'FECRU Development Workflow - Triage - Restricted',
+              'to': '2940899',
+              'toString': 'FE-CRUC Bug Workflow'
+							}
+						]
+					},
+					{
+          'id': '8246987',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=osanico',
+            'name': 'osanico',
+            'key': 'osanico',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=osanico&avatarId=5780008',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=osanico&avatarId=5780008',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=osanico&avatarId=5780008',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=osanico&avatarId=5780008'
+							},
+            'displayName': 'Owen',
+            'active': True,
+            'timeZone': 'Asia/Manila'
+						},
+          'created': '2018-10-16T08: 14: 46.442+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '2940899',
+              'fromString': 'FE-CRUC Bug Workflow',
+              'to': '2954913',
+              'toString': 'JAC Bug Workflow v3'
+							}
+						]
+					}
+				]
+			},
+    'comments_data': [
+				{
+        'self': 'https: //jira.atlassian.com/rest/api/2/issue/56218/comment/86992',
+        'id': '86992',
+        'author': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/user?username=ahempel',
+          'name': 'ahempel',
+          'key': 'ahempel',
+          'avatarUrls': {
+            '48x48': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=48',
+            '24x24': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=24',
+            '16x16': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=16',
+            '32x32': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=32'
+						},
+          'displayName': 'Adrian Hempel [Atlassian
+						]',
+          'active': True,
+          'timeZone': 'Australia/Sydney'
+					},
+        'body': "D'oh!  No wiki renderer.",
+        'updateAuthor': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/user?username=ahempel',
+          'name': 'ahempel',
+          'key': 'ahempel',
+          'avatarUrls': {
+            '48x48': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=48',
+            '24x24': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=24',
+            '16x16': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=16',
+            '32x32': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=32'
+						},
+          'displayName': 'Adrian Hempel [Atlassian
+						]',
+          'active': True,
+          'timeZone': 'Australia/Sydney'
+					},
+        'created': '2007-08-15T05: 05: 03.350+0000',
+        'updated': '2007-08-15T05: 05: 03.350+0000'
+				},
+				{
+        'self': 'https: //jira.atlassian.com/rest/api/2/issue/56218/comment/87281',
+        'id': '87281',
+        'author': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+          'name': 'mquail',
+          'key': 'mquail',
+          'avatarUrls': {
+            '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+            '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+            '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+            '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+						},
+          'displayName': 'Matt Quail',
+          'active': False,
+          'timeZone': 'Australia/Sydney'
+					},
+        'body': 'Adrian, I believe that version of Crucible (1.0.1) would, when selecting changesets, sometimes create diffs "to the last reviewed revision" instead of the more sensible "just the diff for this changeset". Can you confirm of that would be the case here?\r\n\r\nIf so, then it has been addressed for the upcoming 1.1. If not, I\'ll look into it further.\r\n\r\n',
+        'updateAuthor': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+          'name': 'mquail',
+          'key': 'mquail',
+          'avatarUrls': {
+            '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+            '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+            '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+            '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+						},
+          'displayName': 'Matt Quail',
+          'active': False,
+          'timeZone': 'Australia/Sydney'
+					},
+        'created': '2007-08-20T00: 07: 50.392+0000',
+        'updated': '2007-08-20T00: 07: 50.392+0000'
+				},
+				{
+        'self': 'https: //jira.atlassian.com/rest/api/2/issue/56218/comment/87371',
+        'id': '87371',
+        'author': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/user?username=ahempel',
+          'name': 'ahempel',
+          'key': 'ahempel',
+          'avatarUrls': {
+            '48x48': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=48',
+            '24x24': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=24',
+            '16x16': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=16',
+            '32x32': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=32'
+						},
+          'displayName': 'Adrian Hempel [Atlassian
+						]',
+          'active': True,
+          'timeZone': 'Australia/Sydney'
+					},
+        'body': 'Hi Matt.  Yes, that makes sense.  I can see that revision 43644 of the file was reviewed previously here:\r\n\r\nhttps: //svn.atlassian.com/privateeye/cru/CR-45/viewfile/CFR-290',
+        'updateAuthor': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/user?username=ahempel',
+          'name': 'ahempel',
+          'key': 'ahempel',
+          'avatarUrls': {
+            '48x48': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=48',
+            '24x24': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=24',
+            '16x16': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=16',
+            '32x32': 'https: //avatar-cdn.atlassian.com/68d1d12421c6debe4a0c75065cbf1f71?d=mm&s=32'
+						},
+          'displayName': 'Adrian Hempel [Atlassian
+						]',
+          'active': True,
+          'timeZone': 'Australia/Sydney'
+					},
+        'created': '2007-08-20T23: 39: 00.588+0000',
+        'updated': '2007-08-20T23: 39: 00.588+0000'
+				},
+				{
+        'self': 'https: //jira.atlassian.com/rest/api/2/issue/56218/comment/87373',
+        'id': '87373',
+        'author': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+          'name': 'mquail',
+          'key': 'mquail',
+          'avatarUrls': {
+            '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+            '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+            '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+            '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+						},
+          'displayName': 'Matt Quail',
+          'active': False,
+          'timeZone': 'Australia/Sydney'
+					},
+        'body': "Cool, I'll mark this as closed then, the issue is addressed in 1.1",
+        'updateAuthor': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+          'name': 'mquail',
+          'key': 'mquail',
+          'avatarUrls': {
+            '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+            '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+            '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+            '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+						},
+          'displayName': 'Matt Quail',
+          'active': False,
+          'timeZone': 'Australia/Sydney'
+					},
+        'created': '2007-08-20T23: 56: 39.054+0000',
+        'updated': '2007-08-20T23: 56: 39.054+0000'
+				}
+			]
+		}
+	}{
+  'backend_name': 'Jira',
+  'backend_version': '0.14.0',
+  'perceval_version': '0.17.6',
+  'timestamp': 1618681771.175631,
+  'origin': 'https: //jira.atlassian.com/',
+  'uuid': '5fd0d0c3e12a6666d3a6180526f717bf43e9fd8a',
+  'updated_on': 1199425466.0,
+  'classified_fields_filtered': None,
+  'category': 'issue',
+  'search_fields': {
+    'item_id': '57184',
+    'project_id': '11771',
+    'project_key': 'CRUC',
+    'project_name': 'Crucible',
+    'issue_key': 'CRUC-40'
+		},
+  'tag': 'https: //jira.atlassian.com/',
+  'data': {
+    'expand': 'operations,versionedRepresentations,editmeta,changelog,transitions,renderedFields',
+    'id': '57184',
+    'self': 'https: //jira.atlassian.com/rest/api/2/issue/57184',
+    'key': 'CRUC-40',
+    'fields': {
+      'customfield_18232': {
+        'id': 'customfield_18232',
+        'name': 'Confluence Page Id',
+        'value': None
+				},
+      'customfield_20430': {
+        'id': 'customfield_20430',
+        'name': 'Target Release Date',
+        'value': None
+				},
+      'customfield_20031': {
+        'id': 'customfield_20031',
+        'name': 'UTC Timezone Offset',
+        'value': None
+				},
+      'customfield_18230': {
+        'id': 'customfield_18230',
+        'name': 'Public Documentation URL',
+        'value': None
+				},
+      'customfield_18231': {
+        'id': 'customfield_18231',
+        'name': 'Product Space Name',
+        'value': None
+				},
+      'customfield_10590': {
+        'id': 'customfield_10590',
+        'name': 'Complexity',
+        'value': None
+				},
+      'customfield_20030': {
+        'id': 'customfield_20030',
+        'name': 'Product Space Key',
+        'value': None
+				},
+      'customfield_10591': {
+        'id': 'customfield_10591',
+        'name': 'Value',
+        'value': None
+				},
+      'customfield_16732': {
+        'id': 'customfield_16732',
+        'name': 'Review Status',
+        'value': None
+				},
+      'customfield_10350': {
+        'id': 'customfield_10350',
+        'name': 'Accept',
+        'value': None
+				},
+      'customfield_10230': {
+        'id': 'customfield_10230',
+        'name': 'Tool Bar',
+        'value': None
+				},
+      'customfield_16730': {
+        'id': 'customfield_16730',
+        'name': 'Feedback About',
+        'value': None
+				},
+      'customfield_14430': {
+        'id': 'customfield_14430',
+        'name': 'Done Criteria',
+        'value': None
+				},
+      'fixVersions': [
+					{
+          'self': 'https: //jira.atlassian.com/rest/api/2/version/13466',
+          'id': '13466',
+          'description': '',
+          'name': '1.2.1',
+          'archived': True,
+          'released': True,
+          'releaseDate': '2007-12-18'
+					}
+				],
+      'resolution': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/resolution/1',
+        'id': '1',
+        'description': 'A fix for this issue is checked into the tree and tested.',
+        'name': 'Fixed'
+				},
+      'customfield_11436': {
+        'id': 'customfield_11436',
+        'name': 'Support Rank (Obsolete)',
+        'value': '79916'
+				},
+      'customfield_11435': {
+        'id': 'customfield_11435',
+        'name': 'Studio Rank',
+        'value': '79913'
+				},
+      'customfield_11437': {
+        'id': 'customfield_11437',
+        'name': 'JIRA Support Rank (Obsolete)',
+        'value': '80025'
+				},
+      'customfield_17130': {
+        'id': 'customfield_17130',
+        'name': 'Symptom Severity',
+        'value': None
+				},
+      'lastViewed': None,
+      'customfield_17531': {
+        'id': 'customfield_17531',
+        'name': 'Do you plan to migrate to new Portfolio plans within the next 3 months?',
+        'value': None
+				},
+      'customfield_10180': {
+        'id': 'customfield_10180',
+        'name': 'Issue Key Searcher',
+        'value': None
+				},
+      'customfield_17530': {
+        'id': 'customfield_17530',
+        'name': "Have you used Portfolio for JIRA's new 2.0 plans?",
+        'value': None
+				},
+      'customfield_17930': {
+        'id': 'customfield_17930',
+        'name': 'Unique Views',
+        'value': None
+				},
+      'priority': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/priority/3',
+        'iconUrl': 'https: //jira.atlassian.com/images/icons/priorities/medium.svg',
+        'name': 'Medium',
+        'id': '3'
+				},
+      'customfield_11431': {
+        'id': 'customfield_11431',
+        'name': 'Rank (Obsolete)',
+        'value': '109410'
+				},
+      'customfield_11434': {
+        'id': 'customfield_11434',
+        'name': 'Bugmaster Rank',
+        'value': '79911'
+				},
+      'customfield_17933': {
+        'id': 'customfield_17933',
+        'name': 'Flaky Count',
+        'value': None
+				},
+      'labels': [],
+      'customfield_11433': {
+        'id': 'customfield_11433',
+        'name': 'Backlog Order (Obsolete)',
+        'value': '92549'
+				},
+      'customfield_10610': {
+        'id': 'customfield_10610',
+        'name': 'Support reference count',
+        'value': None
+				},
+      'aggregatetimeoriginalestimate': None,
+      'timeestimate': None,
+      'versions': [
+					{
+          'self': 'https: //jira.atlassian.com/rest/api/2/version/13165',
+          'id': '13165',
+          'description': '',
+          'name': '1.0.4',
+          'archived': True,
+          'released': True,
+          'releaseDate': '2007-08-15'
+					}
+				],
+      'customfield_20934': {
+        'id': 'customfield_20934',
+        'name': 'Please share any other thoughts here:',
+        'value': None
+				},
+      'issuelinks': [],
+      'customfield_20932': {
+        'id': 'customfield_20932',
+        'name': "What's preventing you from migrating to the Improved interface?",
+        'value': None
+				},
+      'customfield_20933': {
+        'id': 'customfield_20933',
+        'name': 'What, if any, features are missing from the Improved experience?',
+        'value': None
+				},
+      'assignee': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/user?username=cmacneill',
+        'name': 'cmacneill',
+        'key': 'cmacneill',
+        'avatarUrls': {
+          '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=cmacneill&avatarId=5779599',
+          '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=cmacneill&avatarId=5779599',
+          '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=cmacneill&avatarId=5779599',
+          '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=cmacneill&avatarId=5779599'
+					},
+        'displayName': 'Conor',
+        'active': True,
+        'timeZone': 'Australia/Sydney'
+				},
+      'customfield_20930': {
+        'id': 'customfield_20930',
+        'name': 'Have you used the new improved experience?',
+        'value': None
+				},
+      'customfield_20931': {
+        'id': 'customfield_20931',
+        'name': 'Do you intend to migrate to the new experience in the next 6 months?',
+        'value': None
+				},
+      'status': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/status/6',
+        'description': "Work on this issue is complete.\r\n\r\nIf it’s fixed in a Server product, the resolution will be ‘Fixed’ and the Fix Version field will indicate the product version that contains the fix.\r\n\r\nIf no code changes were required, the resolution will be ‘Duplicate', 'Won't fix', 'Handled by support', 'Timed out', or similar.",
+        'iconUrl': 'https: //jira.atlassian.com/images/icons/statuses/closed.png',
+        'name': 'Closed',
+        'id': '6',
+        'statusCategory': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/statuscategory/3',
+          'id': 3,
+          'key': 'done',
+          'colorName': 'green',
+          'name': 'Done'
+					}
+				},
+      'customfield_20530': {
+        'id': 'customfield_20530',
+        'name': 'PC Ticket',
+        'value': None
+				},
+      'customfield_16030': {
+        'id': 'customfield_16030',
+        'name': 'Development Effort',
+        'value': None
+				},
+      'components': [],
+      'customfield_18730': {
+        'id': 'customfield_18730',
+        'name': 'Development',
+        'value': '{}'
+				},
+      'customfield_20131': {
+        'id': 'customfield_20131',
+        'name': 'Fixed in Long Term Support Release/s',
+        'value': None
+				},
+      'customfield_14130': {
+        'id': 'customfield_14130',
+        'name': 'Regular Expression',
+        'value': None
+				},
+      'customfield_12231': {
+        'id': 'customfield_12231',
+        'name': 'Tested By',
+        'value': None
+				},
+      'customfield_14532': {
+        'id': 'customfield_14532',
+        'name': 'Stash Bug Message Test',
+        'value': None
+				},
+      'customfield_12230': {
+        'id': 'customfield_12230',
+        'name': 'Developed By',
+        'value': None
+				},
+      'customfield_10571': {
+        'id': 'customfield_10571',
+        'name': 'Story Points',
+        'value': None
+				},
+      'customfield_18731': {
+        'id': 'customfield_18731',
+        'name': 'Banana PM Suggestion',
+        'value': None
+				},
+      'customfield_12630': {
+        'id': 'customfield_12630',
+        'name': 'CVSS Score',
+        'value': None
+				},
+      'customfield_10575': {
+        'id': 'customfield_10575',
+        'name': 'Regular Expression - old',
+        'value': None
+				},
+      'customfield_11930': {
+        'id': 'customfield_11930',
+        'name': 'Sprint',
+        'value': None
+				},
+      'aggregatetimeestimate': None,
+      'customfield_17230': {
+        'id': 'customfield_17230',
+        'name': 'UIS',
+        'value': None
+				},
+      'creator': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/user?username=bob.swift',
+        'name': 'bob.swift',
+        'key': 'bob.swift',
+        'avatarUrls': {
+          '48x48': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=48',
+          '24x24': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=24',
+          '16x16': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=16',
+          '32x32': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=32'
+					},
+        'displayName': 'Bob Swift',
+        'active': True,
+        'timeZone': 'Etc/UCT'
+				},
+      'customfield_17630': {
+        'id': 'customfield_17630',
+        'name': 'Team',
+        'value': None
+				},
+      'customfield_20240': {
+        'id': 'customfield_20240',
+        'name': 'Blocked from migrating',
+        'value': None
+				},
+      'customfield_15331': {
+        'id': 'customfield_15331',
+        'name': 'Quality Assistance',
+        'value': None
+				},
+      'customfield_20241': {
+        'id': 'customfield_20241',
+        'name': 'Churned',
+        'value': None
+				},
+      'subtasks': [],
+      'customfield_10160': {
+        'id': 'customfield_10160',
+        'name': 'Last commented',
+        'value': '419212800'
+				},
+      'customfield_10161': {
+        'id': 'customfield_10161',
+        'name': 'Last commented by user?',
+        'value': 'true'
+				},
+      'customfield_11130': {
+        'id': 'customfield_11130',
+        'name': 'Global Rank (Obsolete)',
+        'value': '56614'
+				},
+      'customfield_13430': {
+        'id': 'customfield_13430',
+        'name': 'Effort',
+        'value': None
+				},
+      'customfield_10680': {
+        'id': 'customfield_10680',
+        'name': 'Release Version History',
+        'value': None
+				},
+      'customfield_10681': {
+        'id': 'customfield_10681',
+        'name': 'Current Status',
+        'value': None
+				},
+      'reporter': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/user?username=bob.swift',
+        'name': 'bob.swift',
+        'key': 'bob.swift',
+        'avatarUrls': {
+          '48x48': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=48',
+          '24x24': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=24',
+          '16x16': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=16',
+          '32x32': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=32'
+					},
+        'displayName': 'Bob Swift',
+        'active': True,
+        'timeZone': 'Etc/UCT'
+				},
+      'customfield_17631': {
+        'id': 'customfield_17631',
+        'name': 'Parent Link',
+        'value': None
+				},
+      'aggregateprogress': {
+        'progress': 0,
+        'total': 0
+				},
+      'progress': {
+        'progress': 0,
+        'total': 0
+				},
+      'customfield_20239': {
+        'id': 'customfield_20239',
+        'name': 'Bug/Suggestion Type',
+        'value': None
+				},
+      'votes': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/issue/CRUC-40/votes',
+        'votes': 0,
+        'hasVoted': False
+				},
+      'customfield_20237': {
+        'id': 'customfield_20237',
+        'name': 'Partners',
+        'value': None
+				},
+      'customfield_20238': {
+        'id': 'customfield_20238',
+        'name': 'Interested Team/s',
+        'value': None
+				},
+      'customfield_20631': {
+        'id': 'customfield_20631',
+        'name': 'CVE ID',
+        'value': None
+				},
+      'customfield_20632': {
+        'id': 'customfield_20632',
+        'name': 'Next Review and Update',
+        'value': None
+				},
+      'customfield_20236': {
+        'id': 'customfield_20236',
+        'name': 'Total NB Contacts Collected',
+        'value': None
+				},
+      'customfield_18430': {
+        'id': 'customfield_18430',
+        'name': 'Feature',
+        'value': None
+				},
+      'customfield_20233': {
+        'id': 'customfield_20233',
+        'name': 'Shirt Size',
+        'value': None
+				},
+      'issuetype': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/issuetype/1',
+        'id': '1',
+        'description': 'A problem which impairs or prevents the functions of the product.',
+        'iconUrl': 'https: //jira.atlassian.com/secure/viewavatar?size=xsmall&avatarId=51493&avatarType=issuetype',
+        'name': 'Bug',
+        'subtask': False,
+        'avatarId': 51493
+				},
+      'customfield_20630': {
+        'id': 'customfield_20630',
+        'name': 'CVSS Severity',
+        'value': None
+				},
+      'customfield_20234': {
+        'id': 'customfield_20234',
+        'name': 'Prioritization',
+        'value': None
+				},
+      'customfield_20231': {
+        'id': 'customfield_20231',
+        'name': 'R1 Due',
+        'value': None
+				},
+      'customfield_20232': {
+        'id': 'customfield_20232',
+        'name': 'Market Group Requested by',
+        'value': None
+				},
+      'customfield_16530': {
+        'id': 'customfield_16530',
+        'name': 'Target deployment',
+        'value': None
+				},
+      'customfield_18030': {
+        'id': 'customfield_18030',
+        'name': 'Expected Result',
+        'value': None
+				},
+      'customfield_18031': {
+        'id': 'customfield_18031',
+        'name': 'Actual Result',
+        'value': None
+				},
+      'customfield_20230': {
+        'id': 'customfield_20230',
+        'name': 'Approvers',
+        'value': None
+				},
+      'timespent': None,
+      'customfield_10150': {
+        'id': 'customfield_10150',
+        'name': 'Participants',
+        'value': [
+          'bob.swift(bob.swift)',
+          'cmacneill(cmacneill)',
+          'mquail(mquail)'
+					]
+				},
+      'customfield_16930': {
+        'id': 'customfield_16930',
+        'name': 'Hypothesis',
+        'value': None
+				},
+      'project': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/project/11771',
+        'id': '11771',
+        'key': 'CRUC',
+        'name': 'Crucible',
+        'projectTypeKey': 'software',
+        'avatarUrls': {
+          '48x48': 'https: //jira.atlassian.com/secure/projectavatar?pid=11771&avatarId=105292',
+          '24x24': 'https: //jira.atlassian.com/secure/projectavatar?size=small&pid=11771&avatarId=105292',
+          '16x16': 'https: //jira.atlassian.com/secure/projectavatar?size=xsmall&pid=11771&avatarId=105292',
+          '32x32': 'https: //jira.atlassian.com/secure/projectavatar?size=medium&pid=11771&avatarId=105292'
+					},
+        'projectCategory': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/projectCategory/10031',
+          'id': '10031',
+          'description': '',
+          'name': 'Atlassian Products'
+					}
+				},
+      'customfield_16532': {
+        'id': 'customfield_16532',
+        'name': 'Engineering contact',
+        'value': None
+				},
+      'customfield_16531': {
+        'id': 'customfield_16531',
+        'name': 'Release notes',
+        'value': None
+				},
+      'customfield_18830': {
+        'id': 'customfield_18830',
+        'name': 'EIS',
+        'value': None
+				},
+      'aggregatetimespent': None,
+      'customfield_16933': {
+        'id': 'customfield_16933',
+        'name': 'Result',
+        'value': None
+				},
+      'customfield_18831': {
+        'id': 'customfield_18831',
+        'name': 'Request Participants',
+        'value': None
+				},
+      'customfield_16932': {
+        'id': 'customfield_16932',
+        'name': 'Deployment Type',
+        'value': None
+				},
+      'customfield_16535': {
+        'id': 'customfield_16535',
+        'name': 'Server applicable?',
+        'value': None
+				},
+      'resolutiondate': '2008-01-04T05: 44: 26.000+0000',
+      'workratio': -1,
+      'watches': {
+        'self': 'https: //jira.atlassian.com/rest/api/2/issue/CRUC-40/watchers',
+        'watchCount': 0,
+        'isWatching': False
+				},
+      'customfield_17333': {
+        'id': 'customfield_17333',
+        'name': "What's the main reason you're currently using Classic plans?",
+        'value': None
+				},
+      'customfield_19230': {
+        'id': 'customfield_19230',
+        'name': 'Target start',
+        'value': None
+				},
+      'customfield_15430': {
+        'id': 'customfield_15430',
+        'name': 'HipChat Team',
+        'value': None
+				},
+      'customfield_19231': {
+        'id': 'customfield_19231',
+        'name': 'Target end',
+        'value': None
+				},
+      'created': '2007-09-06T15: 51: 45.000+0000',
+      'customfield_19232': {
+        'id': 'customfield_19232',
+        'name': 'Original story points',
+        'value': None
+				},
+      'customfield_15830': {
+        'id': 'customfield_15830',
+        'name': 'Occurrence Factor',
+        'value': None
+				},
+      'customfield_17335': {
+        'id': 'customfield_17335',
+        'name': 'If you have any other thoughts please share them here:',
+        'value': None
+				},
+      'customfield_17334': {
+        'id': 'customfield_17334',
+        'name': 'What, if any, Classic plan features are missing from new plans that are essential for your work?',
+        'value': None
+				},
+      'customfield_11631': {
+        'id': 'customfield_11631',
+        'name': 'Themes',
+        'value': None
+				},
+      'customfield_12833': {
+        'id': 'customfield_12833',
+        'name': 'Task Points',
+        'value': None
+				},
+      'customfield_12832': {
+        'id': 'customfield_12832',
+        'name': 'SupportRank (Obsolete)',
+        'value': None
+				},
+      'customfield_14735': {
+        'id': 'customfield_14735',
+        'name': 'Support Rank',
+        'value': '1|hwn46f:'
+				},
+      'updated': '2008-01-04T05: 44: 26.000+0000',
+      'customfield_20730': {
+        'id': 'customfield_20730',
+        'name': 'Partners',
+        'value': None
+				},
+      'customfield_20333': {
+        'id': 'customfield_20333',
+        'name': 'Label message',
+        'value': '<div class="aui-message">\r\n<p>\r\n<b>Customers Impacted</b><br><br>\r\n\r\nUse the fields below to denote which customer wants this feature.<br>\r\n<b>Labels</b> =  an interested customer<br>\r\n<b>Blocked from migrating</b> = a customer blocked from migrating to cloud till this feature is available<br>\r\n<b>Churned</b> = a customer that has churned from Cloud due to the unavailability of this feature.<br>\r\n<b>Partners</b> = a partner who provided this feedback as impacting their customers. If they mentioned customers, the customer names should be added to one of the above mentioned labels.<br><br>\r\n\r\n<i>For accuracy of reporting please use the customer domain. eg: for Amazon as the customer, add the label amazon.com<i>\r\n</p>\r\n<span class="aui-icon icon-info"></span>\r\n</div>'
+				},
+      'customfield_20330': {
+        'id': 'customfield_20330',
+        'name': 'Enterprise Customers',
+        'value': None
+				},
+      'customfield_18130': {
+        'id': 'customfield_18130',
+        'name': 'URL',
+        'value': None
+				},
+      'customfield_14330': {
+        'id': 'customfield_14330',
+        'name': 'T-Shirt Size',
+        'value': None
+				},
+      'timeoriginalestimate': None,
+      'customfield_10250': {
+        'id': 'customfield_10250',
+        'name': 'Support Request Message (IssueType:Bug)',
+        'value': '<div id="support-bug-request-msg" class="aui-message aui-message-info"> <b>Help us fix bugs faster</b> <br> <br>To help us get the right details and fix bugs as quickly as possible, submit your bug report in our <a href="http://support.atlassian.com/contact" class="bugfix-support">support system</a>. <br> <br> You can still view, watch, comment on, and vote for <a href="https://jira.atlassian.com/secure/Dashboard.jspa?selectPageId=10440" target="_blank" rel="noopener">existing bugs</a>. <br><br> <a class="aui-button aui-button-primary bugfix-support" href="http://support.atlassian.com/contact" resolved="">Report a new bug</a> <a class="aui-button bugfix-search" href="https://jira.atlassian.com/issues/?jql=issuetype=Bug+AND+project=CRUC" resolved="">Search for an existing bug</a> <br> </div>'
+				},
+      'description': 'We ran into another instance of this and did some more digging.  It was not as simple as first thought.  Fisheye seems to occassionally get the wrong changeset number (off by 1) and declaring the change a binary change.  I will attach images to show 2 examples.\r\n\r\n',
+      'customfield_16632': {
+        'id': 'customfield_16632',
+        'name': 'Page Path',
+        'value': None
+				},
+      'customfield_16630': {
+        'id': 'customfield_16630',
+        'name': 'Project Type',
+        'value': None
+				},
+      'customfield_10650': {
+        'id': 'customfield_10650',
+        'name': 'Flagged',
+        'value': None
+				},
+      'customfield_14733': {
+        'id': 'customfield_14733',
+        'name': 'Global Rank',
+        'value': '2|hwjekv:'
+				},
+      'customfield_10530': {
+        'id': 'customfield_10530',
+        'name': 'Tester',
+        'value': None
+				},
+      'customfield_14734': {
+        'id': 'customfield_14734',
+        'name': 'JIRA Support Rank',
+        'value': '1|hwn4vb:'
+				},
+      'customfield_10651': {
+        'id': 'customfield_10651',
+        'name': 'Epic/Theme',
+        'value': None
+				},
+      'customfield_18931': {
+        'id': 'customfield_18931',
+        'name': 'Add-on Type',
+        'value': None
+				},
+      'customfield_12831': {
+        'id': 'customfield_12831',
+        'name': 'Support Points',
+        'value': None
+				},
+      'customfield_14731': {
+        'id': 'customfield_14731',
+        'name': 'Rank',
+        'value': '1|hwvphz:'
+				},
+      'customfield_18932': {
+        'id': 'customfield_18932',
+        'name': 'Original Estimate',
+        'value': None
+				},
+      'customfield_10653': {
+        'id': 'customfield_10653',
+        'name': 'Story Points',
+        'value': None
+				},
+      'customfield_14732': {
+        'id': 'customfield_14732',
+        'name': 'Backlog Order',
+        'value': '1|hwp993:'
+				},
+      'customfield_12830': {
+        'id': 'customfield_12830',
+        'name': 'Ratio',
+        'value': None
+				},
+      'summary': 'Getting wrong changeset number causes diff to be missing',
+      'customfield_17432': {
+        'id': 'customfield_17432',
+        'name': 'Health Monitor',
+        'value': None
+				},
+      'customfield_17431': {
+        'id': 'customfield_17431',
+        'name': 'Team',
+        'value': None
+				},
+      'customfield_19330': {
+        'id': 'customfield_19330',
+        'name': 'Bug Fix Policy',
+        'value': '<a href="https://confluence.atlassian.com/support/atlassian-bug-fixing-policy-201294573.html" target="_blank" rel="noopener"> View Atlassian Server bug fix policy</a>'
+				},
+      'customfield_13230': {
+        'id': 'customfield_13230',
+        'name': 'Date of First Response',
+        'value': '2007-09-10T00: 02: 28.280+0000'
+				},
+      'customfield_15532': {
+        'id': 'customfield_15532',
+        'name': 'Performance Gain',
+        'value': None
+				},
+      'customfield_17831': {
+        'id': 'customfield_17831',
+        'name': 'Reason',
+        'value': None
+				},
+      'customfield_13231': {
+        'id': 'customfield_13231',
+        'name': 'Time in Status',
+        'value': '1_*:*_1_*:*_10331561645_*|*_6_*:*_1_*:*_0'
+				},
+      'customfield_17830': {
+        'id': 'customfield_17830',
+        'name': 'Splunk query to find customers impacted by this bug',
+        'value': None
+				},
+      'customfield_15530': {
+        'id': 'customfield_15530',
+        'name': 'Server / Client',
+        'value': None
+				},
+      'customfield_17433': {
+        'id': 'customfield_17433',
+        'name': 'Play',
+        'value': None
+				},
+      'customfield_15932': {
+        'id': 'customfield_15932',
+        'name': 'When is this event fired?',
+        'value': None
+				},
+      'customfield_15930': {
+        'id': 'customfield_15930',
+        'name': 'Implemented in HipChat Clients',
+        'value': None
+				},
+      'customfield_15931': {
+        'id': 'customfield_15931',
+        'name': 'Questions you want to answer',
+        'value': None
+				},
+      'customfield_11730': {
+        'id': 'customfield_11730',
+        'name': 'Risk',
+        'value': None
+				},
+      'customfield_12931': {
+        'id': 'customfield_12931',
+        'name': 'Epic Link',
+        'value': None
+				},
+      'environment': 'Perforce - 2006.1/109255 (2006/10/17)',
+      'duedate': None,
+      'customfield_20831': {
+        'id': 'customfield_20831',
+        'name': 'System/UI Changes',
+        'value': None
+				},
+      'customfield_20830': {
+        'id': 'customfield_20830',
+        'name': 'Does fix include system behavior or UI changes?',
+        'value': None
+				}
+			},
+    'renderedFields': {
+      'customfield_18232': '',
+      'customfield_20430': None,
+      'customfield_20031': None,
+      'customfield_18230': None,
+      'customfield_18231': '',
+      'customfield_10590': None,
+      'customfield_20030': '',
+      'customfield_10591': None,
+      'customfield_16732': None,
+      'customfield_10350': None,
+      'customfield_10230': None,
+      'customfield_16730': None,
+      'customfield_14430': '',
+      'fixVersions': None,
+      'resolution': None,
+      'customfield_11436': None,
+      'customfield_11435': None,
+      'customfield_11437': None,
+      'customfield_17130': None,
+      'lastViewed': None,
+      'customfield_17531': None,
+      'customfield_10180': None,
+      'customfield_17530': None,
+      'customfield_17930': None,
+      'priority': None,
+      'customfield_11431': None,
+      'customfield_11434': None,
+      'customfield_17933': None,
+      'labels': None,
+      'customfield_11433': None,
+      'customfield_10610': None,
+      'aggregatetimeoriginalestimate': None,
+      'timeestimate': None,
+      'versions': None,
+      'customfield_20934': '',
+      'issuelinks': None,
+      'customfield_20932': '',
+      'customfield_20933': '',
+      'assignee': None,
+      'customfield_20930': None,
+      'customfield_20931': None,
+      'status': None,
+      'customfield_20530': None,
+      'customfield_16030': None,
+      'components': None,
+      'customfield_18730': None,
+      'customfield_20131': '',
+      'customfield_14130': None,
+      'customfield_12231': None,
+      'customfield_14532': None,
+      'customfield_12230': None,
+      'customfield_10571': None,
+      'customfield_18731': None,
+      'customfield_12630': None,
+      'customfield_10575': '',
+      'customfield_11930': None,
+      'aggregatetimeestimate': None,
+      'customfield_17230': None,
+      'creator': None,
+      'customfield_17630': None,
+      'customfield_20240': None,
+      'customfield_15331': None,
+      'customfield_20241': None,
+      'subtasks': None,
+      'customfield_10160': None,
+      'customfield_10161': None,
+      'customfield_11130': None,
+      'customfield_13430': None,
+      'customfield_10680': None,
+      'customfield_10681': '',
+      'reporter': None,
+      'customfield_17631': None,
+      'aggregateprogress': None,
+      'progress': None,
+      'customfield_20239': None,
+      'votes': None,
+      'customfield_20237': '',
+      'customfield_20238': None,
+      'customfield_20631': '',
+      'customfield_20632': None,
+      'customfield_20236': None,
+      'customfield_18430': None,
+      'customfield_20233': None,
+      'issuetype': None,
+      'customfield_20630': None,
+      'customfield_20234': None,
+      'customfield_20231': None,
+      'customfield_20232': None,
+      'customfield_16530': '',
+      'customfield_18030': '',
+      'customfield_18031': '',
+      'customfield_20230': None,
+      'timespent': None,
+      'customfield_10150': None,
+      'customfield_16930': '',
+      'project': None,
+      'customfield_16532': None,
+      'customfield_16531': '',
+      'customfield_18830': None,
+      'aggregatetimespent': None,
+      'customfield_16933': None,
+      'customfield_18831': None,
+      'customfield_16932': None,
+      'customfield_16535': None,
+      'resolutiondate': '04/Jan/2008 5: 44 AM',
+      'workratio': None,
+      'watches': None,
+      'customfield_17333': '',
+      'customfield_19230': None,
+      'customfield_15430': None,
+      'customfield_19231': None,
+      'created': '06/Sep/2007 3: 51 PM',
+      'customfield_19232': None,
+      'customfield_15830': None,
+      'customfield_17335': '',
+      'customfield_17334': '',
+      'customfield_11631': None,
+      'customfield_12833': None,
+      'customfield_12832': None,
+      'customfield_14735': None,
+      'updated': '04/Jan/2008 5: 44 AM',
+      'customfield_20730': None,
+      'customfield_20333': None,
+      'customfield_20330': None,
+      'customfield_18130': '',
+      'customfield_14330': None,
+      'timeoriginalestimate': None,
+      'customfield_10250': None,
+      'description': '<p>We ran into another instance of this and did some more digging.  It was not as simple as first thought.  Fisheye seems to occassionally get the wrong changeset number (off by 1) and declaring the change a binary change.  I will attach images to show 2 examples.</p>\n',
+      'customfield_16632': '',
+      'customfield_16630': None,
+      'customfield_10650': None,
+      'customfield_14733': None,
+      'customfield_10530': None,
+      'customfield_14734': None,
+      'customfield_10651': None,
+      'customfield_18931': None,
+      'customfield_12831': None,
+      'customfield_14731': None,
+      'customfield_18932': None,
+      'customfield_10653': None,
+      'customfield_14732': None,
+      'customfield_12830': '',
+      'summary': None,
+      'customfield_17432': None,
+      'customfield_17431': None,
+      'customfield_19330': None,
+      'customfield_13230': '10/Sep/2007 12: 02 AM',
+      'customfield_15532': '',
+      'customfield_17831': None,
+      'customfield_13231': None,
+      'customfield_17830': '',
+      'customfield_15530': None,
+      'customfield_17433': None,
+      'customfield_15932': '',
+      'customfield_15930': None,
+      'customfield_15931': '',
+      'customfield_11730': None,
+      'customfield_12931': None,
+      'environment': '<p>Perforce - 2006.1/109255 (2006/10/17)</p>',
+      'duedate': None,
+      'customfield_20831': '',
+      'customfield_20830': None
+			},
+    'transitions': [],
+    'operations': {
+      'linkGroups': [
+					{
+          'id': 'view.issue.opsbar',
+          'links': [],
+          'groups': [
+							{
+              'id': 'ops-login-lnk_container',
+              'links': [
+									{
+                  'id': 'ops-login-lnk',
+                  'label': 'Log In',
+                  'title': 'Log In',
+                  'href': '/login.jsp?os_destination=%2Frest%2Fapi%2F2%2Fsearch%3Fjql%3Dproject%2B%253D%2BCRUC%2BAND%2Bupdated%2B%253E%2B0%2Border%2Bby%2Bupdated%2Basc%26startAt%3D0%26expand%3DrenderedFields%252Ctransitions%252Coperations%252Cchangelog%26maxResults%3D100'
+									}
+								],
+              'groups': []
+							},
+							{
+              'id': 'opsbar-operations',
+              'weight': 10,
+              'links': [],
+              'groups': [
+									{
+                  'header': {
+                    'id': 'opsbar-operations_more',
+                    'label': 'More'
+										},
+                  'links': [],
+                  'groups': []
+									}
+								]
+							},
+							{
+              'id': 'opsbar-transitions',
+              'weight': 20,
+              'links': [],
+              'groups': [
+									{
+                  'header': {
+                    'id': 'opsbar-transitions_more',
+                    'label': 'Workflow'
+										},
+                  'links': [],
+                  'groups': []
+									}
+								]
+							},
+							{
+              'id': 'opsbar-admin',
+              'weight': 30,
+              'links': [],
+              'groups': [
+									{
+                  'header': {
+                    'id': 'opsbar-admin_more',
+                    'label': 'Admin'
+										},
+                  'links': [],
+                  'groups': []
+									}
+								]
+							},
+							{
+              'id': 'opsbar-restore',
+              'weight': 40,
+              'links': [],
+              'groups': [
+									{
+                  'header': {
+                    'id': 'opsbar-restore_more',
+                    'label': 'Restore Issue'
+										},
+                  'links': [],
+                  'groups': []
+									}
+								]
+							}
+						]
+					},
+					{
+          'id': 'jira.issue.tools',
+          'links': [],
+          'groups': [
+							{
+              'id': 'view.issue.exports',
+              'header': {
+                'id': 'viewissue-export',
+                'iconClass': 'icon-default aui-icon aui-icon-small aui-iconfont-export',
+                'label': 'Export',
+                'title': 'Export this issue in another format'
+								},
+              'links': [
+									{
+                  'id': 'jira.issueviews:issue-xml',
+                  'label': 'XML',
+                  'href': '/si/jira.issueviews:issue-xml/CRUC-40/CRUC-40.xml'
+									},
+									{
+                  'id': 'jira.issueviews:issue-word',
+                  'label': 'Word',
+                  'href': '/si/jira.issueviews:issue-word/CRUC-40/CRUC-40.doc'
+									},
+									{
+                  'id': 'jira.issueviews:issue-html',
+                  'label': 'Printable',
+                  'href': '/si/jira.issueviews:issue-html/CRUC-40/CRUC-40.html'
+									}
+								],
+              'groups': []
+							}
+						]
+					}
+				]
+			},
+    'changelog': {
+      'startAt': 0,
+      'maxResults': 17,
+      'total': 17,
+      'histories': [
+					{
+          'id': '131902',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+            'name': 'mquail',
+            'key': 'mquail',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+							},
+            'displayName': 'Matt Quail',
+            'active': False,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2007-09-10T00: 02: 28.287+0000',
+          'items': [
+							{
+              'field': 'Fix Version',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '13160',
+              'toString': '1.1'
+							}
+						]
+					},
+					{
+          'id': '141160',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=bob.swift',
+            'name': 'bob.swift',
+            'key': 'bob.swift',
+            'avatarUrls': {
+              '48x48': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=48',
+              '24x24': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=24',
+              '16x16': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=16',
+              '32x32': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=32'
+							},
+            'displayName': 'Bob Swift',
+            'active': True,
+            'timeZone': 'Etc/UCT'
+						},
+          'created': '2007-09-10T14: 47: 04.500+0000',
+          'items': [
+							{
+              'field': 'Attachment',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '22034',
+              'toString': 'review-list.png'
+							},
+							{
+              'field': 'Attachment',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '22035',
+              'toString': 'diff-list.png'
+							},
+							{
+              'field': 'Attachment',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '22036',
+              'toString': 'p4-history.png'
+							},
+							{
+              'field': 'description',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': 'The source file probably had about 10K lines. ',
+              'to': None,
+              'toString': 'We ran into another instance of this and did some more digging.  It was not as simple as first thought.  Fisheye seems to occassionally get the wrong changeset number (off by 1) and declaring the change a binary change.  I will attach images to show 2 examples.\r\n\r\n'
+							},
+							{
+              'field': 'environment',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': None,
+              'toString': 'Perforce - 2006.1/109255 (2006/10/17)'
+							},
+							{
+              'field': 'summary',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': "Large file doesn't show any diffs",
+              'to': None,
+              'toString': 'Getting wrong changeset number causes diff to be missing'
+							}
+						]
+					},
+					{
+          'id': '141162',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=bob.swift',
+            'name': 'bob.swift',
+            'key': 'bob.swift',
+            'avatarUrls': {
+              '48x48': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=48',
+              '24x24': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=24',
+              '16x16': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=16',
+              '32x32': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=32'
+							},
+            'displayName': 'Bob Swift',
+            'active': True,
+            'timeZone': 'Etc/UCT'
+						},
+          'created': '2007-09-10T14: 53: 00.180+0000',
+          'items': [
+							{
+              'field': 'Attachment',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '22037',
+              'toString': 'diff-list2.png'
+							},
+							{
+              'field': 'Attachment',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '22038',
+              'toString': 'p4-history2.png'
+							}
+						]
+					},
+					{
+          'id': '141163',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=bob.swift',
+            'name': 'bob.swift',
+            'key': 'bob.swift',
+            'avatarUrls': {
+              '48x48': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=48',
+              '24x24': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=24',
+              '16x16': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=16',
+              '32x32': 'https: //avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=32'
+							},
+            'displayName': 'Bob Swift',
+            'active': True,
+            'timeZone': 'Etc/UCT'
+						},
+          'created': '2007-09-10T14: 53: 43.300+0000',
+          'items': [
+							{
+              'field': 'Attachment',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '22039',
+              'toString': 'changeset-detail.png'
+							}
+						]
+					},
+					{
+          'id': '151071',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+            'name': 'mquail',
+            'key': 'mquail',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+							},
+            'displayName': 'Matt Quail',
+            'active': False,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2007-09-17T01: 34: 02.323+0000',
+          'items': [
+							{
+              'field': 'Fix Version',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '13213',
+              'toString': '1.2'
+							},
+							{
+              'field': 'Fix Version',
+              'fieldtype': 'jira',
+              'from': '13160',
+              'fromString': '1.1',
+              'to': None,
+              'toString': None
+							}
+						]
+					},
+					{
+          'id': '161826',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=cmacneill',
+            'name': 'cmacneill',
+            'key': 'cmacneill',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=cmacneill&avatarId=5779599',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=cmacneill&avatarId=5779599',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=cmacneill&avatarId=5779599',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=cmacneill&avatarId=5779599'
+							},
+            'displayName': 'Conor',
+            'active': True,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2007-09-27T05: 17: 21.238+0000',
+          'items': [
+							{
+              'field': 'assignee',
+              'fieldtype': 'jira',
+              'from': 'mquail',
+              'fromString': 'Matt Quail [Atlassian
+								]',
+              'to': 'cmacneill',
+              'toString': 'Conor MacNeill [Atlassian
+								]'
+							}
+						]
+					},
+					{
+          'id': '171954',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+            'name': 'mquail',
+            'key': 'mquail',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+							},
+            'displayName': 'Matt Quail',
+            'active': False,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2007-12-03T03: 52: 12.386+0000',
+          'items': [
+							{
+              'field': 'Fix Version',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '13402',
+              'toString': 'Short Term'
+							},
+							{
+              'field': 'Fix Version',
+              'fieldtype': 'jira',
+              'from': '13213',
+              'fromString': '1.2',
+              'to': None,
+              'toString': None
+							}
+						]
+					},
+					{
+          'id': '175708',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=cmacneill',
+            'name': 'cmacneill',
+            'key': 'cmacneill',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=cmacneill&avatarId=5779599',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=cmacneill&avatarId=5779599',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=cmacneill&avatarId=5779599',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=cmacneill&avatarId=5779599'
+							},
+            'displayName': 'Conor',
+            'active': True,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2008-01-04T05: 44: 26.937+0000',
+          'items': [
+							{
+              'field': 'Fix Version',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '13466',
+              'toString': '1.2.1'
+							},
+							{
+              'field': 'Fix Version',
+              'fieldtype': 'jira',
+              'from': '13402',
+              'fromString': 'Short Term',
+              'to': None,
+              'toString': None
+							},
+							{
+              'field': 'resolution',
+              'fieldtype': 'jira',
+              'from': None,
+              'fromString': None,
+              'to': '1',
+              'toString': 'Fixed'
+							},
+							{
+              'field': 'status',
+              'fieldtype': 'jira',
+              'from': '1',
+              'fromString': 'Open',
+              'to': '6',
+              'toString': 'Closed'
+							}
+						]
+					},
+					{
+          'id': '176219',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+            'name': 'mquail',
+            'key': 'mquail',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+							},
+            'displayName': 'Matt Quail',
+            'active': False,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2008-01-07T05: 11: 19.815+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '86849',
+              'fromString': 'JIRA Bug Workflow v2',
+              'to': '119914',
+              'toString': 'reviewflow'
+							}
+						]
+					},
+					{
+          'id': '252138',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=bhumphreys',
+            'name': 'bhumphreys',
+            'key': 'bhumphreys',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=bhumphreys&avatarId=2461365',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=bhumphreys&avatarId=2461365',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=bhumphreys&avatarId=2461365',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=bhumphreys&avatarId=2461365'
+							},
+            'displayName': 'BrendanA',
+            'active': True,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2009-01-27T23: 15: 22.099+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '119914',
+              'fromString': 'reviewflow',
+              'to': '152089',
+              'toString': 'review flow with triage'
+							}
+						]
+					},
+					{
+          'id': '253543',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=bhumphreys',
+            'name': 'bhumphreys',
+            'key': 'bhumphreys',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=bhumphreys&avatarId=2461365',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=bhumphreys&avatarId=2461365',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=bhumphreys&avatarId=2461365',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=bhumphreys&avatarId=2461365'
+							},
+            'displayName': 'BrendanA',
+            'active': True,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2009-01-27T23: 53: 18.679+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '152089',
+              'fromString': 'review flow with triage',
+              'to': '153469',
+              'toString': 'Copy of review flow with triage'
+							}
+						]
+					},
+					{
+          'id': '255821',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=bhumphreys',
+            'name': 'bhumphreys',
+            'key': 'bhumphreys',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=bhumphreys&avatarId=2461365',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=bhumphreys&avatarId=2461365',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=bhumphreys&avatarId=2461365',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=bhumphreys&avatarId=2461365'
+							},
+            'displayName': 'BrendanA',
+            'active': True,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2009-01-28T00: 12: 22.542+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '153469',
+              'fromString': 'Copy of review flow with triage',
+              'to': '155730',
+              'toString': 'Simple review flow with triage'
+							}
+						]
+					},
+					{
+          'id': '638287',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=sruiz',
+            'name': 'sruiz',
+            'key': 'sruiz',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=sruiz&avatarId=2481743',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=sruiz&avatarId=2481743',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=sruiz&avatarId=2481743',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=sruiz&avatarId=2481743'
+							},
+            'displayName': 'Seb Ruiz',
+            'active': False,
+            'timeZone': 'Australia/Sydney'
+						},
+          'created': '2011-07-15T00: 00: 43.669+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '155730',
+              'fromString': 'Simple review flow with triage',
+              'to': '312207',
+              'toString': 'FECRU Development Workflow (Triage)'
+							}
+						]
+					},
+					{
+          'id': '2646496',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=pswiecicki',
+            'name': 'pswiecicki',
+            'key': 'pswiecicki',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=pswiecicki&avatarId=5805639',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=pswiecicki&avatarId=5805639',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=pswiecicki&avatarId=5805639',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=pswiecicki&avatarId=5805639'
+							},
+            'displayName': 'Piotr Swiecicki',
+            'active': True,
+            'timeZone': 'Europe/Warsaw'
+						},
+          'created': '2015-08-17T13: 40: 31.857+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '312207',
+              'fromString': 'FECRU Development Workflow (Triage)',
+              'to': '937175',
+              'toString': 'FECRU Development Workflow - Triage'
+							}
+						]
+					},
+					{
+          'id': '3852226',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=osanico',
+            'name': 'osanico',
+            'key': 'osanico',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=osanico&avatarId=5780008',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=osanico&avatarId=5780008',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=osanico&avatarId=5780008',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=osanico&avatarId=5780008'
+							},
+            'displayName': 'Owen',
+            'active': True,
+            'timeZone': 'Asia/Manila'
+						},
+          'created': '2016-07-07T06: 35: 57.732+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '937175',
+              'fromString': 'FECRU Development Workflow - Triage',
+              'to': '1512597',
+              'toString': 'FECRU Development Workflow - Triage - Restricted'
+							}
+						]
+					},
+					{
+          'id': '8227334',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=osanico',
+            'name': 'osanico',
+            'key': 'osanico',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=osanico&avatarId=5780008',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=osanico&avatarId=5780008',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=osanico&avatarId=5780008',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=osanico&avatarId=5780008'
+							},
+            'displayName': 'Owen',
+            'active': True,
+            'timeZone': 'Asia/Manila'
+						},
+          'created': '2018-10-16T04: 40: 28.944+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '1512597',
+              'fromString': 'FECRU Development Workflow - Triage - Restricted',
+              'to': '2939821',
+              'toString': 'FE-CRUC Bug Workflow'
+							}
+						]
+					},
+					{
+          'id': '8244774',
+          'author': {
+            'self': 'https: //jira.atlassian.com/rest/api/2/user?username=osanico',
+            'name': 'osanico',
+            'key': 'osanico',
+            'avatarUrls': {
+              '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=osanico&avatarId=5780008',
+              '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=osanico&avatarId=5780008',
+              '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=osanico&avatarId=5780008',
+              '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=osanico&avatarId=5780008'
+							},
+            'displayName': 'Owen',
+            'active': True,
+            'timeZone': 'Asia/Manila'
+						},
+          'created': '2018-10-16T08: 13: 55.647+0000',
+          'items': [
+							{
+              'field': 'Workflow',
+              'fieldtype': 'jira',
+              'from': '2939821',
+              'fromString': 'FE-CRUC Bug Workflow',
+              'to': '2952703',
+              'toString': 'JAC Bug Workflow v3'
+							}
+						]
+					}
+				]
+			},
+    'comments_data': [
+				{
+        'self': 'https: //jira.atlassian.com/rest/api/2/issue/57184/comment/88719',
+        'id': '88719',
+        'author': {
+          'self': 'https: //jira.atlassian.com/rest/api/2/user?username=mquail',
+          'name': 'mquail',
+          'key': 'mquail',
+          'avatarUrls': {
+            '48x48': 'https: //jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+            '24x24': 'https: //jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+            '16x16': 'https: //jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+            '32x32': 'https: //jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+						},
+          'displayName': 'Matt Quail',
+          'active': False,
+          'timeZone': 'Australia/Sydney'
+					},
+        'body': 'Hi Bob,\r\n\r\nCould you tell us how large the diff in question is? We also need to know what browser version, on what OS, you were using to view the review.\r\n\r\nIf possible, we would like the text of the diff (eg the output of "svn diff -r N:M") and your FISHEYE_INST/var/log/* log files. If you collect this information, please upload as a support request to https://support.atlassian.com.',
+        'updateAuthor': {
+          'self': 'https://jira.atlassian.com/rest/api/2/user?username=mquail',
+          'name': 'mquail',
+          'key': 'mquail',
+          'avatarUrls': {
+            '48x48': 'https://jira.atlassian.com/secure/useravatar?ownerId=mquail&avatarId=2720435',
+            '24x24': 'https://jira.atlassian.com/secure/useravatar?size=small&ownerId=mquail&avatarId=2720435',
+            '16x16': 'https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=mquail&avatarId=2720435',
+            '32x32': 'https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=mquail&avatarId=2720435'
+          },
+          'displayName': 'Matt Quail',
+          'active': False,
+          'timeZone': 'Australia/Sydney'
+        },
+        'created': '2007-09-10T00:02:28.280+0000',
+        'updated': '2007-09-10T00:02:28.280+0000'
+      },
+      {
+        'self': 'https://jira.atlassian.com/rest/api/2/issue/57184/comment/88828',
+        'id': '88828',
+        'author': {
+          'self': 'https://jira.atlassian.com/rest/api/2/user?username=bob.swift',
+          'name': 'bob.swift',
+          'key': 'bob.swift',
+          'avatarUrls': {
+            '48x48': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=48',
+            '24x24': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=24',
+            '16x16': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=16',
+            '32x32': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=32'
+          },
+          'displayName': 'Bob Swift',
+          'active': True,
+          'timeZone': 'Etc/UCT'
+        },
+        'body': 'Another example',
+        'updateAuthor': {
+          'self': 'https://jira.atlassian.com/rest/api/2/user?username=bob.swift',
+          'name': 'bob.swift',
+          'key': 'bob.swift',
+          'avatarUrls': {
+            '48x48': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=48',
+            '24x24': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=24',
+            '16x16': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=16',
+            '32x32': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=32'
+          },
+          'displayName': 'Bob Swift',
+          'active': True,
+          'timeZone': 'Etc/UCT'
+        },
+        'created': '2007-09-10T14:53:00.130+0000',
+        'updated': '2007-09-10T14:53:00.130+0000'
+      },
+      {
+        'self': 'https://jira.atlassian.com/rest/api/2/issue/57184/comment/88990',
+        'id': '88990',
+        'author': {
+          'self': 'https://jira.atlassian.com/rest/api/2/user?username=cmacneill',
+          'name': 'cmacneill',
+          'key': 'cmacneill',
+          'avatarUrls': {
+            '48x48': 'https://jira.atlassian.com/secure/useravatar?ownerId=cmacneill&avatarId=5779599',
+            '24x24': 'https://jira.atlassian.com/secure/useravatar?size=small&ownerId=cmacneill&avatarId=5779599',
+            '16x16': 'https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=cmacneill&avatarId=5779599',
+            '32x32': 'https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=cmacneill&avatarId=5779599'
+          },
+          'displayName': 'Conor',
+          'active': True,
+          'timeZone': 'Australia/Sydney'
+        },
+        'body': 'Hi Bob,\r\n\r\nCould you let us know the version of Perforce client and server you are using? \r\n\r\nThere are some known problems in earlier versions of Perforce client handling large filelog outputs:\r\nhttp://www.cenqua.com/fisheye/doc/latest/admin/p4client.html\r\n\r\n\r\n',
+        'updateAuthor': {
+          'self': 'https://jira.atlassian.com/rest/api/2/user?username=cmacneill',
+          'name': 'cmacneill',
+          'key': 'cmacneill',
+          'avatarUrls': {
+            '48x48': 'https://jira.atlassian.com/secure/useravatar?ownerId=cmacneill&avatarId=5779599',
+            '24x24': 'https://jira.atlassian.com/secure/useravatar?size=small&ownerId=cmacneill&avatarId=5779599',
+            '16x16': 'https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=cmacneill&avatarId=5779599',
+            '32x32': 'https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=cmacneill&avatarId=5779599'
+          },
+          'displayName': 'Conor',
+          'active': True,
+          'timeZone': 'Australia/Sydney'
+        },
+        'created': '2007-09-11T09:09:57.000+0000',
+        'updated': '2007-09-11T09:09:57.000+0000'
+      },
+      {
+        'self': 'https://jira.atlassian.com/rest/api/2/issue/57184/comment/89354',
+        'id': '89354',
+        'author': {
+          'self': 'https://jira.atlassian.com/rest/api/2/user?username=bob.swift',
+          'name': 'bob.swift',
+          'key': 'bob.swift',
+          'avatarUrls': {
+            '48x48': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=48',
+            '24x24': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=24',
+            '16x16': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=16',
+            '32x32': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=32'
+          },
+          'displayName': 'Bob Swift',
+          'active': True,
+          'timeZone': 'Etc/UCT'
+        },
+        'body': 'The perforce version is in the environment.',
+        'updateAuthor': {
+          'self': 'https://jira.atlassian.com/rest/api/2/user?username=bob.swift',
+          'name': 'bob.swift',
+          'key': 'bob.swift',
+          'avatarUrls': {
+            '48x48': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=48',
+            '24x24': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=24',
+            '16x16': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=16',
+            '32x32': 'https://avatar-cdn.atlassian.com/90ad87d2a78082a8988237c355f7c0ff?d=mm&s=32'
+          },
+          'displayName': 'Bob Swift',
+          'active': True,
+          'timeZone': 'Etc/UCT'
+        },
+        'created': '2007-09-17T03:30:49.784+0000',
+        'updated': '2007-09-17T03:30:49.784+0000'
+      },
+      {
+        'self': 'https://jira.atlassian.com/rest/api/2/issue/57184/comment/99542',
+        'id': '99542',
+        'author': {
+          'self': 'https://jira.atlassian.com/rest/api/2/user?username=cmacneill',
+          'name': 'cmacneill',
+          'key': 'cmacneill',
+          'avatarUrls': {
+            '48x48': 'https://jira.atlassian.com/secure/useravatar?ownerId=cmacneill&avatarId=5779599',
+            '24x24': 'https://jira.atlassian.com/secure/useravatar?size=small&ownerId=cmacneill&avatarId=5779599',
+            '16x16': 'https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=cmacneill&avatarId=5779599',
+            '32x32': 'https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=cmacneill&avatarId=5779599'
+          },
+          'displayName': 'Conor',
+          'active': True,
+          'timeZone': 'Australia/Sydney'
+        },
+        'body': 'This issue has been resolved in support case  CRC-83.',
+        'updateAuthor': {
+          'self': 'https://jira.atlassian.com/rest/api/2/user?username=cmacneill',
+          'name': 'cmacneill',
+          'key': 'cmacneill',
+          'avatarUrls': {
+            '48x48': 'https://jira.atlassian.com/secure/useravatar?ownerId=cmacneill&avatarId=5779599',
+            '24x24': 'https://jira.atlassian.com/secure/useravatar?size=small&ownerId=cmacneill&avatarId=5779599',
+            '16x16': 'https://jira.atlassian.com/secure/useravatar?size=xsmall&ownerId=cmacneill&avatarId=5779599',
+            '32x32': 'https://jira.atlassian.com/secure/useravatar?size=medium&ownerId=cmacneill&avatarId=5779599'
+          },
+          'displayName': 'Conor',
+          'active': True,
+          'timeZone': 'Australia/Sydney'
+        },
+        'created': '2008-01-04T05:44:26.873+0000',
+        'updated': '2008-01-04T05:44:26.873+0000'
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1552158059 source:d:\bilkent\cs202\hw1\hw1\main.cpp
+	<iostream>
+	"sorting.h"
+
+1552157802 d:\bilkent\cs202\hw1\hw1\sorting.h
+
+1552157789 source:d:\bilkent\cs202\hw1\hw1\sorting.cpp
+	"sorting.h"
+	<cmath>
+	<stdlib.h>
+	<time.h>
+	<iostream>
+

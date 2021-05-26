@@ -1,0 +1,9 @@
+public class Test2
+{
+   Test a;
+   
+   public static void main( String[] args)
+   {
+      a = new Test();
+   }
+}

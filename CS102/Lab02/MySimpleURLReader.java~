@@ -1,0 +1,37 @@
+import cs1.SimpleURLReader;
+
+public class MySimpleURLReader extends SimpleURLReader
+{
+   String linkURL;
+   
+   public MySimpleURLReader( String url)
+   {
+      super( url);
+      this.linkURL = url;
+   }
+   
+   public String getURL()
+   {
+      return this.linkURL;
+   }
+   
+   public String getName()
+   {
+      int position = this.linkURL.length() - 1;
+      while( this.linkURL.charAt( position) != '/')
+      {
+         position--;
+      }
+      return this.linkURL.substring((position + 1), this.linkURL.length());
+   }
+   
+   @Override
+   public String getPageContents()
+   {
+      String input;
+      String output;
+      input = super.getPageContents();
+      output = input.substring(4, input.length());
+      return output;
+   }
+}

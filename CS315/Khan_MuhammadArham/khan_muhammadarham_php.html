@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+  <head>
+    <title>Php Scoping</title>
+  </head>
+  <body>
+    <?php
+      //tests positional correspondence
+      function test1( $a, $b, $c){
+        echo "test1: a=$a, b=$b, c=$c\n";
+      }
+      //tests default values
+      function test2( $a = "defaultA", $b = "defaultB", $c = "defaultC"){
+        echo "test1: a=$a, b=$b, c=$c\n";
+      }
+      //tests variable number of parameters
+      function test3(){
+          
+          $args = func_get_args();
+          echo "test3: ";
+          foreach ($args as $arg){
+            echo $arg.", ";
+          }
+          echo "\n";
+      }
+      //tests pass by value
+      function test4( $a ){
+          $a = "test4A";
+        echo "test4: a=$a\n";
+      }
+      //tests pass by reference
+      function test5( &$a ){
+          $a = "test5A";
+        echo "test5: a=$a\n";
+      }
+      function main(){
+        //showing positional correspondence
+        test1( "a", "b", "c");
+        
+        echo("\n");
+        //showing keyword correspondence
+          //keyword correspondence does not work
+          //ignores labels, takes the parameters
+          //according to the positions
+        test1( $b = "b", $a = "a", $c = "c");
+        test1( $c = "c", $b = "b", $a = "a");
+        test1( $a = "a", $b = "b", $c = "c");
+        
+        echo "\n";
+          //combination of positional and keyword combination
+          //_____________________________________________
+          // since keyword correspondence not possible,
+          // combinational follows positional correspondence
+          test1($b = "b", $a = "a", "c");
+          test1("a", $b = "b", $c = "c");
+          
+          echo "\n";
+  
+          //Formal Parameter Default Values
+          test2("a", "b", "c");
+          test2("a", "b");
+          test2("a");
+          test2();
+          
+          echo "\n";
+          //Variable Number of Actual Parameters
+          //____________________________________
+          //less than or greater than actual number of parameters
+          //error: too few arguments error
+          //test1("a", "b");
+          //ignores extra parameter
+          test1("a", "b", "c", "d");
+          
+          //variable number of parameters accepted
+          test3("a", "b");
+          test3("a", "b", "c", "d", "e");
+          
+          echo "\n";
+          $a = "mainA";
+          $b = "mainB";
+  
+          //parameters are passed by value by default
+          test4($a);
+          test5($b);
+          //to pass by reference, add & vefore variable
+          echo "main: a=" . $a . ", b=" . $b . "\n";
+          
+      }
+      
+      main();
+  ?>
+  </body>
+</html>

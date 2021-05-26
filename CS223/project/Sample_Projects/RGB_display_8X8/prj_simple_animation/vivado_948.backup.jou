@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Tue Mar 20 16:20:18 2018
+# Process ID: 948
+# Current directory: C:/Users/hamze/Desktop/RGB_display_8X8/Simple_Animation_netlist_modules
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5680 C:\Users\hamze\Desktop\RGB_display_8X8\Simple_Animation_netlist_modules\display_8X8.xpr
+# Log file: C:/Users/hamze/Desktop/RGB_display_8X8/Simple_Animation_netlist_modules/vivado.log
+# Journal file: C:/Users/hamze/Desktop/RGB_display_8X8/Simple_Animation_netlist_modules\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hamze/Desktop/RGB_display_8X8/Simple_Animation_netlist_modules/display_8X8.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1

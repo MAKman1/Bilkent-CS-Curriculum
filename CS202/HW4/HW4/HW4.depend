@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1558212245 source:d:\bilkent\cs202\hw4\main.cpp
+	"graph.h"
+	<string>
+	<iostream>
+	<fstream>
+
+1558212255 d:\bilkent\cs202\hw4\graph.h
+	<list>
+	<map>
+	<queue>
+	<string>
+	<iostream>
+
+1558212264 source:d:\bilkent\cs202\hw4\graph.cpp
+	"graph.h"
+	<string.h>
+

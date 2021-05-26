@@ -1,0 +1,63 @@
+-to convert parent to sub class, must type cast..
+-implicit parameter
+-public construtor (default in sub class)
+-sub can be passed as parent class
+-dynamic methiod lookup (polymorphism)
+-Method calls are based on object type, not reference type..
+-abstract class: cannot be instantiated
+-abstract method: no implementation
+-abstract method. not in normal class
+-final keyword in class (not inheritable), in method (not overridable)
+-protected int abc; this way (accessible to subclasses other classes in package)
+-protected methods (only in sub classes)
+-java hash code (with all objects)
+-All objects, inherit toString, equals hashcode from Object
+-.equals method checks if contents of two objects are same, == sees if idenical
+-class cast exception (casting another class to anothe)
+-abc instanceOf ABC (seeing if one instance is an instance of another object boolean (if null, false))
+-getClass().getName() get the name of the current subclass
+-instanceOf is true even if it is in subclass
+-public class ClassName implements InterfaceName, InterfaceName,
+-interface: no implementation, always public so don't write it.. boolean getMeasure();
+-interface type: used to specify objects that contains that interface
+-We can use the interface type Measurable to implement a “universal” method for computing averages
+-interface implementing classes must make their methods public.
+-after implementing the comparable interface, Arrays.sort() can be used to sort array
+-constanst can be added to interface. double OUNCES_PER_LITER = 33.814;. use them as Mesurable.OUNCES_PER_LITER;
+-An object such as lengthMeasurer is called a function object. The sole purpose of the object is to execute a single method, in our case measure. instantiate it, use it to performs functions
+
+12************
+
+
+-CRC (classes, responsibilities, collaborators)
+-The public interface of a class is cohesive if all of its features are related to the concept that the class represents.
+-dependency (knows about) - needs other class to funcction
+-UML (Unified modeling language)
+-object diagrams (names underlined) ( show relation between objects, their attribute etc)
+-class diagrams (shows inheritance)
+-Use -----> to show dependency
+-Coupling (how many dependencies between the classes exist) - good to keep it minimal
+-Aggregation (has - a) contains objects of another class (Quiz <Diamond>___ Questions) .stronger from of dependency. requires objects to be declared (not received or locally declared)
+-Inheritance (is - a) use empty arrow with solid line to point to parent class
+-UML Interface Implementation (----- with an empty arrow |>)
+-Divide the rectangle into three parts (class name, attributes, methods). Also, don’t list as an attribute what you also draw as an aggregation. If you denote by aggregation the fact that a Car has Tire objects, don’t add an attribute tires.
+-Multiplicities in aggregation (any number,  1..*   ,     0..1    ,    1)
+-Association (simple line with a purpose on it)
+-Composition (colored diamond with a line) (shows strong relation, this closes, other does too)
+-Paralllel Arrays (different data on the an ith index in different arrays)
+-packages (default package if no package called)
+
+
+8****
+
+-encapsualtion: protecting private interface from public interface. allows changes in implementation without affecting the users
+-instance variables, instance methods
+-immutable object: state cannot be changed after it is initialized
+-to make data about a class avaialble, declare it as a static (private static int counter;) then public static int returnCount();
+
+-Arrays.copyOf(values, n) allocates an array of length n,
+-ArrayList is a generic class.
+-ArrayList, .remove(), .size(), .set(), .add(), 
+-ArrayList handles objects, so wrapper classes needed only (Double, Int, etc.- autounboxing..)
+
+-Math.pow(2 , 3), parameter variables, the values supplied are called actual paremeters..

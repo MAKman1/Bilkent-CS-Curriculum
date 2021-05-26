@@ -1,0 +1,10 @@
+package Lab03a;
+public interface Selectable
+{
+   
+   boolean getSelected();
+   
+   void setSelected( boolean value);
+   
+   Shape contains( int x, int y);
+}

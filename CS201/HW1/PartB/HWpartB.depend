@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1542455032 source:d:\c++\learningc\hwpartb\musicalbum.cpp
+	<iostream>
+	<string>
+	"MusicAlbum.h"
+
+1542712452 d:\c++\learningc\hwpartb\musicalbum.h
+	<string>
+	"Song.h"
+
+1542712469 d:\c++\learningc\hwpartb\song.h
+	<string>
+
+1542452738 source:d:\c++\learningc\hwpartb\song.cpp
+	<iostream>
+	<string>
+	"Song.h"
+
+1542454592 source:d:\c++\learningc\hwpartb\mac.cpp
+	<iostream>
+	<string>
+	"MAC.h"
+
+1542712422 d:\c++\learningc\hwpartb\mac.h
+	<string>
+	"MusicAlbum.h"
+
+1542456759 source:d:\c++\learningc\hwpartb\testpartb.cpp
+	<iostream>
+	"MusicAlbum.h"
+	"MAC.h"
+

@@ -1,0 +1,53 @@
+package Lab03a;
+public class Rectangle extends Shape implements Selectable
+{
+   int width;
+   int height;
+   boolean selected;
+   
+   public Rectangle(int width, int height)
+   {
+      super();
+      this.width = width;
+      this.height = height;
+      selected = false;
+   }
+   
+   public double getArea()
+   {
+      return (double)(this.height * this.width);
+   }
+   
+   public String toString()
+   {
+      return "Rectangle (width: " + this.width + ", height: " + this.height + ", Area: " + this.getArea() + ", selected: " + this.selected + ", (x, y) = (" + this.getX() + ", " + this.getY() + "))";
+   }
+   
+   public void setSelected( boolean value)
+   {
+      this.selected = value;
+   }
+   
+   public boolean getSelected()
+   {
+      return this.selected;
+   }
+   
+   public Shape contains( int x, int y)
+   {
+      int xDiff;
+      int yDiff;
+      
+      xDiff = Math.abs(this.width / 2);
+      yDiff = Math.abs(this.height / 2);
+      
+      if( x >= (this.x - xDiff) && x <= (this.x + xDiff) && y >= (this.y - yDiff) && y <= (this.y + yDiff))
+      {
+         this.selected = true;
+         return this;
+       
+      }
+      else
+         return null;
+   }
+}

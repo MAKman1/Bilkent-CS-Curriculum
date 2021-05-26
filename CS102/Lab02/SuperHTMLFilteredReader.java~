@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+
+
+public class SuperHTMLFilteredReader extends HTMLFilteredReader
+{
+   
+   public SuperHTMLFilteredReader( String url)
+   {
+      super( url);
+   }
+   
+   public ArrayList<String> getLinks()
+   {
+      String input;
+      ArrayList<String> output;
+      int beginPosition;
+      int lastPosition;
+      int temp;
+      
+      input = super.getUnfilteredPageContents();
+      output = new ArrayList<String>();
+      beginPosition = 0;
+      lastPosition = 0;
+      temp = 0;
+      
+      for (int i = 0; i < input.length(); i++)
+      {
+         beginPosition = input.indexOf("href=", temp);
+         lastPosition = input.indexOf(">", beginPosition + 1);
+         
+         output.add( input.substring(beginPosition + 5, lastPosition));
+         temp = lastPosition;
+      }
+      
+      return output;
+   }
+   
+   public double getOverhead()
+   {
+      double originalSize;
+      double filteredSize;
+      
+      originalSize = (double) super.getUnfilteredPageContents().length();
+      filteredSize = (double) super.getPageContents().length();
+      
+      return (((originalSize / filteredSize) - 1) * 100);
+      
+         
+   
+   }
+}

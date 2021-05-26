@@ -1,0 +1,68 @@
+#Dibs Sample program
+
+function main(input1,input2)
+  ##assignment
+    samples###
+    
+  temp = a
+  
+  #if statement
+  if (a > b)
+    iF ((a < 4) And a ==b)
+      a = 1
+    elSe
+      a = 0
+    end
+  end
+  
+  #while statement
+  while ( b == 1 And c < 1)
+    a = 1
+  end
+  
+  while a == True
+    b = b + 1
+  end
+  
+  a = (1 + 2) / (1+ b)
+  c = b + ((a-c) * (a+d ))
+  d = a + (b + 2)
+  d = (a + 2)
+  boolOut = a And (b Or c) Or d
+  #for loop
+  for a = 1 to 10
+    for b = (a + 2) / 2  to b - 3
+      a = 11
+    end
+  end
+end
+
+
+function main2()
+
+  a = new ConnecTion("arhamkhan.me")
+  a = new ConnecTion( a)
+  b = new Node()
+  
+  a.connect( "arhamkhan.me")
+  a.disconnect()
+  c = a.receive()
+  a.send(1)
+  a.send(b)
+  
+  c = b.getTIme()
+  c= b.getAirPREssure()
+  c = b.getSoundLEVel()
+  c = b.getLighT()
+  
+  a = (1 + 2) / (1+ a.getTime())
+  b = 1 + tempFunction()
+  
+  a.setSwitch(0,true)
+  
+  return 1
+  return "0"
+  return 1.2
+  return a
+  return (1+2) + (2+ c.getTime())
+end

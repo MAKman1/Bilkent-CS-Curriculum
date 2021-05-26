@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+        <script type="text/javascript">
+                //tests positional correspondence
+                function test1(a, b, c) {
+                        document.write("test1: a=" + a + ", b=" + b + ", c=" + c + "<br>");
+                }
+                //tests default values assignment
+                function test2(a = "defaultA", b = "defaultB", c = "defaultC") {
+                        document.write("test2: a=" + a + ", b=" + b + ", c=" + c + "<br>");
+                }
+                //tests variable number of arguments alottment
+                function test3(...args) {
+                        document.write("test3: " + args + "<br>");
+                }
+                //tests pass by value
+                function test4(a) {
+                        a = "test4A"
+                        document.write("test4: a=" + a + "<br>");
+                }
+                //tests pass by reference
+                function test5(a) {
+                        a.val = "test5A"
+                        document.write("test5: a=" + a.val + "<br>");
+                }
+                function main() {
+                        //showing positional correspondence
+                        test1("a", "b", "c");
+
+                        document.write("<br>");
+                        //showing keyword correspondence
+                        //keyword correspondence does not work
+                        //ignores labels, takes the parameters
+                        //according to the positions
+                        test1(b = "b", a = "a", c = "c");
+                        test1(c = "c", b = "b", a = "a");
+                        test1(a = "a", b = "b", c = "c");
+
+                        document.write("<br>");
+                        //combination of positional and keyword combination
+                        //_____________________________________________
+                        // since keyword correspondence not possible,
+                        // combinational follows positional correspondence
+                        test1(b = "b", a = "a", "c");
+                        test1("a", b = "b", c = "c");
+
+                        document.write("<br>");
+
+                        //Formal Parameter Default Values
+                        test2("a", "b", "c");
+                        test2("a", "b");
+                        test2("a");
+                        test2();
+
+                        document.write("<br>");
+                        //Variable Number of Actual Parameters
+                        //____________________________________
+                        //less than or greater than actual number of parameters
+                        //considers missing parameter undefined
+                        test1("a", "b");
+                        //ignores extra parameter
+                        test1("a", "b", "c", "d");
+                        //variable number of parameters accepted
+                        test3("a", "b");
+                        test3("a", "b", "c", "d", "e");
+
+                        document.write("<br>");
+                        var a = "mainA";
+                        var b = { val: 'mainB' };
+
+                        //parameters are passed by value by default
+                        test4(a);
+                        test5(b);
+                        //to pass by reference, an Object must be made
+                        //as only objects are passed by reference
+                        document.write("main: a=" + a + ", b=" + b.val + "<br>");
+
+                }
+                main();
+        </script>
+</head>
+
+</html>

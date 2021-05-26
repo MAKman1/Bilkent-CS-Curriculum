@@ -1,0 +1,17 @@
+package Lab03a;
+public class Square extends Rectangle
+{
+   int side;
+   
+   
+   public Square(int side)
+   {
+      super(side, side);
+      this.side = side;
+   }
+   
+   public String toString()
+   {
+      return "Square (side: " + this.side + ", Area: " + this.getArea() + ", selected: " + this.selected + ")";
+   }
+}

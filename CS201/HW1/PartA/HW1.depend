@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1542712053 source:d:\c++\hw1\simplemusicalbum.cpp
+	<iostream>
+	<string>
+	"SimpleMusicAlbum.h"
+
+1542712099 d:\c++\hw1\simplemusicalbum.h
+	<string>
+
+1542712004 source:d:\c++\hw1\simplemac.cpp
+	<iostream>
+	<string>
+	"SimpleMAC.h"
+
+1541623763 d:\c++\hw1\simplemac.h
+	<string>
+	"SimpleMusicAlbum.h"
+
+1541800847 source:d:\c++\hw1\partatest.cpp
+	<string>
+	<iostream>
+	"SimpleMusicAlbum.h"
+	"SimpleMAC.h"
+
+1542322508 source:d:\c++\hw1\mac.cpp
+	<iostream>
+	<string>
+	"MAC.h"
+
+1542374641 source:d:\c++\hw1\musicalbum.cpp
+	<iostream>
+	<string>
+	"MusicAlbum.h"
+
+1542322046 source:d:\c++\hw1\song.cpp
+	<iostream>
+	<string>
+	"Song.h"
+
+1542290995 d:\c++\hw1\song.h
+	<string>
+
+1542321598 d:\c++\hw1\mac.h
+	<string>
+	"MusicAlbum.h"
+
+1542321171 d:\c++\hw1\musicalbum.h
+	<string>
+	"Song.h"
+

@@ -1,0 +1,13 @@
+CS 102 (Section 2)
+Muhammad Arham Khan - 21701848
+10 February 2018
+45 minutes
+Working!
+
+-the words being compared and the letters being entered by the user should be converted to lower case. To do it, I added a .toLowerCase() before the strings.
+-in the chooseWord function, all the libraries being imported are not specified properly. I imported java.io.FileReader and a few other libraries.
+-bad formatting of tryThis method code (lack of Brackets/ errored use of Brackets)
+-in tryThis method, this.indexOf is used on chars. Edited it, added a .toString clause before it.
+-main passes a String to TryThis method instead of converting it to a Char and then doing it.
+-In main, entry of empty char/ tab character was not considered.
+-Choose method scans all lines in the text file. In this version of the game, this is fine. But, if the game kept going on continuously, it would be very inefficient to read all words from the text file each time. Perhaps, an ArrayList or array of the words may be created in the beginning.

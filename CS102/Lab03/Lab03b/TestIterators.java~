@@ -1,0 +1,36 @@
+package Lab03b;
+
+import java.util.Scanner;
+import java.util.Iterator;
+public class TestIterators
+{
+   public static void main( String[] args)
+   {
+      Scanner scan = new Scanner( System.in);
+      final int SIZE = 10;
+      
+      Iterator i, j;
+      IntBag bag;
+
+      bag = new IntBag( SIZE);
+      i = new IntBagIterator( bag);
+      
+      for (int a = 0; a < 10; a++)
+      {
+         bag.add(a);
+      }
+
+      while ( i.hasNext() ) 
+      {
+         System.out.println( i.next() );
+ 
+         //j = new IntBagIterator( bag);
+         j = bag.iterator();
+ 
+         while ( j.hasNext() )
+         {
+            System.out.println( "--" + j.next() );
+         }
+      }
+   }
+}

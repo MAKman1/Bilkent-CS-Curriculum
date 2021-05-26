@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20140826-r5761">
+  <project autorefresh="false" main="LayoutDemo" manifest="" root="" work="">
+    <createjar file="LayoutDemo.jar" flags="12"/>
+    <source>
+      <file active="true" name="ListPanel.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="ViewSliderPanel.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="ViewColors.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="LightBulbPanel.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="LightBulbControls.java" package="" timestamp="04-Oct-2002 08:46:56">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="LightBulb.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="LayoutDemo.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="IntroPanel.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="GridPanel.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="FlowPanel.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="BoxPanel.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="BorderPanel.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+      <file name="BorderDemo.java" package="" timestamp="15-Jul-2002 12:33:40">
+        <select from="750" to="750"/>
+        <scroll column="166" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>

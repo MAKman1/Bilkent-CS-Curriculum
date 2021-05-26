@@ -1,0 +1,151 @@
+#Program 1
+#single_line_comment #line #text
+
+## arham khan's multiline comment
+dibs is a great language###
+
+
+#assignment statements
+a = 10
+b = a
+b = "tesT String"
+c = 1.2
+tesT = FalSe
+
+#boolean evaluation
+a = b and c
+test = n or tEstVariable
+
+
+#expression assignment statements
+b = a * c
+b = a ** c
+c = a % b
+f = a / b
+s = a == b
+s = a <= b
+a = (b * d) - 2
+
+
+#if statement
+if (a < 10)
+  b = 11
+end
+
+If (a > 22) and n <= b
+  iF a < 10
+    a = 10
+  elsEif a > 4
+    b = 10
+  Else
+    b = 11
+  eNd
+End
+    
+
+#for loop
+fOr a = 1 to 11
+  a = c
+  For c = a to 11
+    b = c
+  eNd
+End
+
+
+#while loop
+wHilE (a < b) #abcd
+  a = b
+eNd
+
+#function declaration
+fUnCtion testFunCtion( abc, bcd, efg)
+  a = b
+  retUrn a
+end
+
+#function call
+testFunCtional( arham, khan)
+a = testFunctional( arham, "khan", 1.2, 12)
+
+#connection
+a = neW ConneCtion("http://testsite.com")
+b = a.Receive()
+a.send(12)
+a.disConnecT()
+
+#Node initialization
+node = new Node()
+
+#sensor values
+a = node.getTime()
+a = Node.getTeMpEratURE()
+a = node.getLiGht()
+a = nOde.getHUmidity()
+a = node.getAirPREssure()
+a = node.getPreSSure()
+a = node.getSoundLEVEl()
+a = noDe.getAirQUALIty()
+
+#switch Control
+nOde.setSWItch(1,TRue)
+
+
+#Program 2
+#Variable Initiliazation
+a = 5
+b = 4
+c = 0
+d = 2
+answer = ""
+check  = false
+If (a/b) == c
+	a =d + 1
+	check = fAlse
+else
+	b = c + 1
+if (a/b == c)
+	check = true
+	answer = "This is a test"
+else
+	d =c + 1
+
+
+#Program 3
+a = 3
+b = 188
+c = 0
+con1 = new Connection("https://google.com")
+con1.send(1)
+c = con1.receive()
+con1.diScoNnect()
+node = new Node()
+for i = 1 to b
+	a = node.getTime()
+	a = node.getLight()
+	a = node.getHumidity()
+	a = node.getPressure()
+end
+
+
+
+#Program 4
+a = 3
+b = 4
+c = 5
+node = new Node()
+if a < b
+	node.setSwitch(1,true)
+	if a < c
+	  node.setSwitch(3,fAlse)
+		if b > a
+		     node.setSwiTch(6,tRue)
+    else
+		     node.setsWitch(9,false)
+    end
+	elseif b > 5
+	     node.setSwitCh(9,true)
+	else
+	    node.setSwitch(9,false)
+  end
+end
+

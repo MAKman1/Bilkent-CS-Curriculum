@@ -1,0 +1,9 @@
+public class ShapeContainerIterator
+{
+   ArrayList<Shape> shapes;
+   
+   public ShapeContainerIterator()
+   {
+   
+   }
+}

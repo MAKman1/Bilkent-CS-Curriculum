@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Tue Mar 20 16:20:18 2018
+# Process ID: 948
+# Current directory: C:/Users/hamze/Desktop/RGB_display_8X8/Simple_Animation_netlist_modules
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5680 C:\Users\hamze\Desktop\RGB_display_8X8\Simple_Animation_netlist_modules\display_8X8.xpr
+# Log file: C:/Users/hamze/Desktop/RGB_display_8X8/Simple_Animation_netlist_modules/vivado.log
+# Journal file: C:/Users/hamze/Desktop/RGB_display_8X8/Simple_Animation_netlist_modules\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hamze/Desktop/RGB_display_8X8/Simple_Animation_netlist_modules/display_8X8.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/hamze/Desktop/display_8X8' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:10 . Memory (MB): peak = 810.277 ; gain = 56.316
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 20 16:21:07 2018] Launched synth_1...
+Run output will be captured here: C:/Users/hamze/Desktop/RGB_display_8X8/Simple_Animation_netlist_modules/display_8X8.runs/synth_1/runme.log
+[Tue Mar 20 16:21:07 2018] Launched impl_1...
+Run output will be captured here: C:/Users/hamze/Desktop/RGB_display_8X8/Simple_Animation_netlist_modules/display_8X8.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 20 16:25:28 2018...

@@ -1,0 +1,853 @@
+##
+## Program1.asm - prints out "hello world"
+##
+##	a0 - points to the string
+##
+
+#################################
+#					 	#
+#		text segment		#
+#						#
+#################################
+
+	.text		
+	.globl __start 
+
+__start:		# execution starts here
+	la $a0,str	# put string address into a0
+	li $v0,4	# system call to print
+	syscall		#   out a string
+
+	li $v0,10  # system call to exit
+	syscall	#    bye bye
+
+
+#################################
+#					 	#
+#     	 data segment		#
+#						#
+#################################
+
+	.data
+str:	.asciiz "hello hocam\n"
+n:	.word	10
+
+##
+## end of file Program1.asm
+
+
+
+##
+## Program2.asm asks user for temperature in Celsius,
+##  converts to Fahrenheit, prints the result.
+##
+##	v0 - reads in Celsius
+##	t0 - holds Fahrenheit result
+##	a0 - points to output strings
+##
+
+#################################
+#					 	#
+#		text segment		#
+#						#
+#################################
+
+	.text		
+	.globl __start	
+
+__start:
+	la $a0,prompt	# output prompt message on terminal
+	li $v0,4	# syscall 4 prints the string
+	syscall
+
+	li $v0, 5	# syscall 5 reads an integer
+	syscall
+
+	mul $t0,$v0,9	# to convert,multiply by 9,
+	div $t0,$t0,5	# divide by 5, then
+	add $t0,$t0,32	# add 32
+
+	la $a0,ans1	# print string before result
+	li $v0,4
+	syscall
+
+	move $a0,$t0	# print integer result
+	li $v0,1		# using syscall 1
+	syscall
+
+	la $a0,endl	# system call to print
+	li $v0,4		# out a newline
+	syscall
+
+	li $v0,10		# system call to exit
+	syscall		#    bye bye
+
+
+#################################
+#					 	#
+#     	 data segment		#
+#						#
+#################################
+
+	.data
+prompt:	.asciiz "Enter temperature (Celsius): "
+ans1:	.asciiz "The temperature in Fahrenheit is "
+endl:	.asciiz "\n"
+
+##
+## end of file Program2.asm
+
+
+
+##
+##	Program3.asm is a loop implementation
+##	of the Fibonacci function
+##        
+
+#################################
+#					 	#
+#		text segment		#
+#						#
+#################################
+
+	.text		
+.globl __start
+ 
+__start:		# execution starts here
+	li $a0,7	# to calculate fib(7)
+	jal fib		# call fib
+	move $a0,$v0	# print result
+	li $v0, 1
+	syscall
+
+	la $a0,endl	# print newline
+	li $v0,4
+	syscall
+
+	li $v0,10
+	syscall	# bye bye
+
+#------------------------------------------------
+
+
+fib:	move $v0,$a0	# initialise last element
+	blt $a0,2,done	# fib(0)=0, fib(1)=1
+
+	li $t0,0	# second last element
+	li $v0,1	# last element
+
+loop:	add $t1,$t0,$v0	# get next value
+	move $t0,$v0	# update second last
+	move $v0,$t1	# update last element
+	sub $a0,$a0,1	# decrement count
+	bgt $a0,1,loop	# exit loop when count=1
+done:	jr $ra
+
+#################################
+#					 	#
+#     	 data segment		#
+#						#
+#################################
+
+	.data
+endl:	.asciiz "\n"
+
+##
+## end of Program3.asm
+
+
+.text
+	la $a0,prompt	# output prompt message on terminal
+	li $v0,4	# syscall 4 prints the string
+	syscall
+	
+	#input the integer
+	li $v0, 5	# syscall 5 reads an integer
+	syscall
+	
+	#comparing the number to see if its less than 20
+	blt $v0,21,func
+	
+	li $v0,10
+	syscall
+	
+	func:
+		#array first index
+		lui $s0, 0x1000
+		ori $s0, $s0, 0x7000
+		
+		add $t0, $0, $0
+		add $t1, $0, $v0	
+		
+		loopA:
+			beq	$t0, $t1, funcB
+			
+			la $a0,promptB	# output prompt message on terminal
+			li $v0,4	# syscall 4 prints the string
+			syscall
+			li $v0, 5	# syscall 5 reads an integer
+			syscall
+			
+			sw $v0, 0($s0)
+			addi $s0, $s0, 4
+			
+			addi	$t0, $t0, 1
+			j	loopA
+
+	funcB:
+		lui	$s0, 0x1000
+		ori	$s0, $s0, 0x7000
+		
+		add	$t0, $0, $0
+		
+		loopB:
+			beq	$t0, $t1, funcC
+			
+			#outputting the current value of array
+			lw	$t5, 0($s0)
+			li	$v0,1
+			move	$a0, $t5
+			syscall
+			
+			la	$a0,newline
+			li	$v0,4
+			syscall
+			
+			addi	$s0, $s0, 4
+			addi	$t0, $t0, 1
+			j	loopB
+			
+	funcC:
+		lui	$s1, 0x1000
+		ori	$s1, $s1, 0x7000 #final array pointer
+	
+		add	$t0, $0, $0
+		addi	$t2, $t1, -1
+		
+		loopC: 
+			beq	$t0, $t2, funcD
+			
+			addi	$s1, $s1, 4
+			addi	$t0, $t0, 1
+			
+			j	loopC
+			
+	funcD:
+	
+		lui	$s0, 0x1000
+		ori	$s0, $s0, 0x7000 #initial array pointer
+		
+		sra	$t4, $t1, 1
+		
+		add	$t0, $0, $0
+		
+		loopD:
+			bge	$t0, $t4, funcE
+			
+			lw	$t6, 0($s0)
+			lw	$t7, 0($s1)
+			sw	$t7, 0($s0)
+			sw	$t6, 0($s1)
+			
+			addi	$t0, $t0, 1
+			addi	$s0, $s0, 4
+			addi	$s1, $s1, -4
+			
+			j	loopD
+	
+	funcE:
+		la	$a0, reversed	# output prompt message on terminal
+		li	$v0,4	# syscall 4 prints the string
+		syscall
+		
+		add	$t0, $0, $0
+		
+		lui	$s0, 0x1000
+		ori	$s0, $s0, 0x7000 #initial array pointer
+		
+		loopE:
+			beq	$t0, $t1, endCall
+			
+			lw	$t5, 0($s0)
+			li	$v0,1
+			move	$a0, $t5
+			syscall
+			
+			la	$a0,newline
+			li	$v0,4
+			syscall
+			
+			addi	$s0, $s0, 4
+			addi	$t0, $t0, 1
+			j	loopE
+			
+	endCall:
+		li	$v0,10		# system call to exit
+		syscall		#    bye bye
+			
+.data
+	prompt:		.asciiz "Enter number of array elements lower than or equal to 20: "
+	promptB:	.asciiz "Enter number to be entered: "
+	newline:	.asciiz "\n"
+	reversed:	.asciiz "the reversed numbers are: \n"
+
+
+.text
+	la	$a0, prompt
+        li	$v0,4
+        syscall
+        #inputting string
+        la 	$a0, stringBuffer
+        li	$a1, 50
+        li	$v0,8
+        syscall
+        
+       
+        add	$t0, $a0, $0#t0 is initial index
+        add	$t9, $a0, $0
+        add	$t3, $0, $0 #t3 is the length
+        
+        calculateLength:
+        	#finding the string length
+        	lb	$t1, 0($t0)
+        	beq	$t1, $0, findFinalIndex
+        	
+        	addi	$t0, $t0, 1
+        	addi	$t3, $t3, 1
+        	
+        	j	calculateLength
+        
+        findFinalIndex:
+        	add	$t0, $t9, $0
+        	add	$t1, $t0, $0 #t1 is the final index
+        	add 	$t4, $0, $0
+        	addi	$t5, $t3, -2 #temp variable to iterate to lower length
+        	
+        	loopIndex:
+        		beq	$t4, $t5, checkPalindrome
+			
+			addi	$t1, $t1, 1
+			addi	$t4, $t4, 1
+			
+			j	loopIndex
+			
+	checkPalindrome:
+		#checking the palindromes through loop
+		bgt	$t0, $t1, palindromeOutput
+		lb	$t4, 0($t0)
+		lb	$t5, 0($t1)
+		bne	$t4, $t5, notPalindromeOutput
+		
+		addi	$t0, $t0, 1
+		addi	$t1, $t1, -1
+		
+		j	checkPalindrome
+		
+	palindromeOutput:
+		la	$a0, pal
+        	li	$v0,4
+        	syscall
+        	
+        	li	$v0,10
+         	syscall
+	
+	notPalindromeOutput:
+        	la	$a0, notPal
+        	li	$v0,4
+        	syscall
+        	
+        	li	$v0,10
+         	syscall
+        	
+.data
+	stringBuffer:	.space 50
+	prompt:		.asciiz "Enter the string for palindrome check: "
+	pal:		.asciiz "Yes, it is a palindrome."
+	notPal:		.asciiz "No, it is not a palindrome."
+
+
+.text
+	la	$a0, prompt
+        li	$v0,4
+        syscall
+        
+        la	$a0, prompt1
+        li	$v0,4
+        syscall
+        
+        li	$v0, 5	# input the value of c
+	syscall
+	add	$t0, $v0, $0 #t0 is c
+	
+	la	$a0, prompt2
+        li	$v0,4
+        syscall
+        
+        li	$v0, 5	# input the value of d
+	syscall
+	add	$t1, $v0, $0 #t1 is d
+	sub	$t2, $t0, $t1 #t2 stores the c - d
+	
+	blt	$t2, $0, fixNegative
+	
+	#output if the difference is positive
+	sra	$t3, $t2, 4
+	mul	$t4, $t3, 16
+	sub	$t4, $t2, $t4 
+	
+	move	$a0,$t4	# print result
+	li	$v0, 1
+	syscall
+	
+	li	$v0,10
+        syscall
+	
+	fixNegative:
+		sub	$t3, $0, $t2
+		
+		#output if the difference is positive
+		sra	$t4, $t3, 4
+		mul	$t5, $t4, 16
+		sub	$t5, $t3, $t5 
+		sub	$t5, $0, $t5
+		
+		move	$a0,$t5	# print result
+		li	$v0, 1
+		syscall
+		
+		li	$v0,10
+        	syscall
+
+.data
+	prompt: .asciiz "Evaluation of x = (c - d) % 16\n==============================\n"
+	prompt1: .asciiz "Enter the value of c: "
+	prompt2: .asciiz "Enter the value of d: "
+
+
+.text		
+.globl __start
+__start:
+
+	la $a0,prompt	# output prompt message on terminal
+	li $v0,4	# syscall 4 prints the string
+	syscall
+	
+	#input the integer
+	li $v0, 5	# syscall 5 reads an integer
+	syscall
+	
+	#comparing the number to see if its less than 20
+	blt $v0,101,inputNumbers
+	
+	li $v0,10
+	syscall
+	
+	lw	$s0, 0($sp)
+	addi	$sp, $sp, 8
+	
+	inputNumbers:
+		#array first index
+		lui 	$s0, 0x1000
+		ori 	$s0, $s0, 0x7000
+		
+		add $t1, $0, $0
+		add $t0, $0, $v0	
+		
+		loopA:
+			beq	$t1, $t0, initiateMenu
+			
+			la $a0,promptB	# output prompt message on terminal
+			li $v0,4	# syscall 4 prints the string
+			syscall
+			li $v0, 5	# syscall 5 reads an integer
+			syscall
+			
+			sw $v0, 0($s0)
+			addi $s0, $s0, 4
+			
+			addi	$t1, $t1, 1
+			j	loopA
+			
+	initiateMenu:
+		lui 	$s0, 0x1000
+		ori 	$s0, $s0, 0x7000
+		addi	$sp, $sp, -8
+		sw	$s0, 0( $sp)
+		sw	$t0, 4( $sp)
+	
+	
+		la $a0,menuPrompt	# output prompt message on terminal
+		li $v0,4	# syscall 4 prints the string
+		syscall
+	
+		#input the integer
+		li $v0, 5	# syscall 5 reads an integer
+		syscall
+		
+		beq	$v0, 1, partA
+		beq	$v0, 2, partB
+		beq	$v0, 3, partC
+		beq	$v0, 4, partD
+		beq	$v0, 5, endProgram
+		
+		la	$a0, invalidMenuPrompt	# output prompt message on terminal
+		li	$v0,4	# syscall 4 prints the string
+		syscall
+		
+		j	initiateMenu
+		
+		#check the options
+		
+	partA:
+		la $a0,partAinputPrompt	# output prompt message on terminal
+		li $v0,4	# syscall 4 prints the string
+		syscall
+	
+		#input the integer
+		li $v0, 5	# syscall 5 reads an integer
+		syscall
+		
+		#array first index
+		lw	$s0, 0($sp)
+		lw	$t0, 4($sp)
+		addi	$sp, $sp, 8
+		
+		add $t2, $0, $0
+		add $t1, $0, $0 #count the iterations	
+		
+		loopPartA:
+			beq	$t1, $t0, outputPartA
+			
+			lw	$s1, 0($s0)
+			bgt	$s1, $v0, addValue
+			addi	$s0, $s0, 4
+			addi	$t1, $t1, 1
+			j	loopPartA
+		
+		addValue:
+			add	$t2, $t2, $s1
+			addi	$s0, $s0, 4
+			addi	$t1, $t1, 1
+			j	loopPartA
+			
+		outputPartA:
+			la $a0,partAoutputPrompt	# output prompt message on terminal
+			li $v0,4	# syscall 4 prints the string
+			syscall
+			
+			move $a0,$t2	# print integer result
+			li $v0,1		# using syscall 1
+			syscall
+
+			la $a0, newline	# system call to print
+			li $v0,4		# out a newline
+			syscall
+	
+	j	initiateMenu
+	
+	partB:
+		la $a0,partBinputPrompt1	# output prompt message on terminal
+		li $v0,4	# syscall 4 prints the string
+		syscall
+	
+		#input the integer
+		li $v0, 5	# syscall 5 reads an integer
+		syscall
+		move	$s2, $v0
+		
+		la $a0,partBinputPrompt2	# output prompt message on terminal
+		li $v0,4	# syscall 4 prints the string
+		syscall
+	
+		#input the integer
+		li $v0, 5	# syscall 5 reads an integer
+		syscall
+		move	$s3, $v0
+		
+		#array first index
+		lw	$s0, 0($sp)
+		lw	$t0, 4($sp)
+		addi	$sp, $sp, 8
+		
+		add $t2, $0, $0
+		add $t1, $0, $0 #count the iterations	
+		
+		loopPartB:
+			beq	$t1, $t0, outputPartB
+			
+			lw	$s1, 0($s0)
+			bge	$s1, $s2, addValueCheck
+			addi	$s0, $s0, 4
+			addi	$t1, $t1, 1
+			j	loopPartB
+		addValueCheck:
+			ble	$s1, $s3, addValueB 
+			addi	$s0, $s0, 4
+			addi	$t1, $t1, 1
+			j	loopPartB
+			
+		addValueB:
+			add	$t2, $t2, $s1
+			addi	$s0, $s0, 4
+			addi	$t1, $t1, 1
+			j	loopPartB
+			
+		outputPartB:
+			la $a0,partBoutputPrompt	# output prompt message on terminal
+			li $v0,4	# syscall 4 prints the string
+			syscall
+			
+			move $a0,$t2	# print integer result
+			li $v0,1		# using syscall 1
+			syscall
+
+			la $a0, newline	# system call to print
+			li $v0,4		# out a newline
+			syscall
+	j	initiateMenu
+	partC:
+		
+		la $a0,partCinputPrompt	# output prompt message on terminal
+		li $v0,4	# syscall 4 prints the string
+		syscall
+	
+		#input the integer
+		li $v0, 5	# syscall 5 reads an integer
+		syscall
+		move	$t4, $v0 #s1 is the divisor
+		
+		#array first index
+		lw	$s0, 0($sp)
+		lw	$t0, 4($sp)
+		addi	$sp, $sp, 8
+		
+		add	$t1, $0, $0 #occurence counter
+		add	$t2, $0, $0 #iteration counter
+		
+		loopC:
+			beq	$t2, $t0, outputPartC
+			
+			lw	$s1, 0($s0)
+			div	$s1, $t4
+			mfhi	$t5
+			beq	$0, $t5, addNumberHere
+			addi	$s0, $s0, 4
+			addi	$t2, $t2, 1
+			j	loopC
+			
+		addNumberHere:
+			addi	$t1, $t1, 1
+			addi	$s0, $s0, 4
+			addi	$t2, $t2, 1
+			j	loopC
+			
+		outputPartC:
+			la $a0,partCoutputPrompt	# output prompt message on terminal
+			li $v0,4	# syscall 4 prints the string
+			syscall
+			
+			move $a0,$t1	# print integer result
+			li $v0,1		# using syscall 1
+			syscall
+
+			la $a0, newline	# system call to print
+			li $v0,4		# out a newline
+			syscall
+	j	initiateMenu
+	
+	partD:
+	
+		la $a0,partDHeading	# output prompt message on terminal
+		li $v0,4	# syscall 4 prints the string
+		syscall
+		
+		#array first index
+		lw	$s0, 0($sp)
+		lw	$s1, 0( $sp)
+		lw	$t0, 4($sp)
+		
+		add	$t1, $0, $0 #iteration counter
+		add	$t2, $0, $0 #iteration counter 2
+		add	$t3, $0, $0 #unique counter
+		loopD:
+			beq	$t1, $t0, outputPartD
+			add	$t7, $0, $0
+			lw	$t4, 0($s0)
+			loopD2:
+				beq	$t2, $t0, incrementCount
+				
+				lw	$t5, 0($s1)
+				beq	$t5, $t4, incrementUnique		
+				
+				addi	$t2, $t2, 1
+				addi	$s1, $s1, 4
+				j	loopD2
+				
+			incrementCount:
+				ble	$t7, 1, uniqueUp
+				
+				lw	$s1, 0( $sp)
+				add	$t2, $0, $0
+				addi	$t1, $t1, 1
+				addi	$s0, $s0, 4
+				j	loopD
+				
+			uniqueUp:
+				addi	$t3, $t3, 1
+				
+				move $a0,$t4	# print integer result
+				li $v0,1		# using syscall 1
+				syscall
+				
+				la $a0,partDseparator	# output prompt message on terminal
+				li $v0,4	# syscall 4 prints the string
+				syscall
+				
+				
+			
+				lw	$s1, 0( $sp)
+				add	$t2, $0, $0
+				addi	$t1, $t1, 1
+				addi	$s0, $s0, 4
+				j	loopD
+				
+			incrementUnique:
+				addi	$t7, $t7, 1
+				addi	$t2, $t2, 1
+				addi	$s1, $s1, 4
+				j	loopD2
+			j	loopD
+			
+			outputPartD:
+				la $a0, newline	# output prompt message on terminal
+				li $v0,4	# syscall 4 prints the string
+				syscall
+			
+				la $a0,partDoutputPrompt	# output prompt message on terminal
+				li $v0,4	# syscall 4 prints the string
+				syscall
+			
+				move $a0,$t3	# print integer result
+				li $v0,1		# using syscall 1
+				syscall
+
+				la $a0, newline	# system call to print
+				li $v0,4		# out a newline
+				syscall
+		
+	addi	$sp, $sp, 8
+	j	initiateMenu
+	
+	endProgram:
+		li $v0,10
+		syscall
+		
+
+
+
+
+.data
+
+prompt:		.asciiz "Enter number of array elements lower than or equal to 100: "
+promptB:	.asciiz "Enter number to be entered: "
+newline:	.asciiz "\n"
+
+
+menuPrompt:	.asciiz "MENU\n=================================\nSelect your desired option:\n1. Summation\n2. Summation (in range)\n3. Number of occurences\n4. Number of unique numbers\n5. QUIT!\n Please enter your desired option: "
+invalidMenuPrompt:	.asciiz "INVALID SELECTION!\n"
+
+
+partAinputPrompt:	.asciiz "Please enter the number for comparison: "
+partAoutputPrompt:	.asciiz "The summation is: "
+
+partBinputPrompt1:	.asciiz "Please enter initial range number: "
+partBinputPrompt2:	.asciiz "Please enter final range number: "
+partBoutputPrompt:	.asciiz "The summation is: "
+
+partCinputPrompt:	.asciiz "Please enter the divisor: "
+partCoutputPrompt:	.asciiz "The number of divisible occurences is: "
+
+partDoutputPrompt:	.asciiz "The unique numbers are: "
+partDseparator:		.asciiz ", "
+partDHeading:		.asciiz "Unique elements: "
+
+
+
+.text
+	la $a0,promptA	# output prompt message on terminal
+	li $v0,4	# syscall 4 prints the string
+	syscall
+	
+	#input the integer
+	li $v0, 5	# syscall 5 reads an integer
+	syscall
+	move	$t0, $v0
+	
+	la $a0,promptB	# output prompt message on terminal
+	li $v0,4	# syscall 4 prints the string
+	syscall
+	
+	#input the integer
+	li $v0, 5	# syscall 5 reads an integer
+	syscall
+	move	$t1, $v0
+	
+	la $a0,promptC	# output prompt message on terminal
+	li $v0,4	# syscall 4 prints the string
+	syscall
+	
+	#input the integer
+	li $v0, 5	# syscall 5 reads an integer
+	syscall
+	move	$t2, $v0
+	
+	
+	la $a0,promptD	# output prompt message on terminal
+	li $v0,4	# syscall 4 prints the string
+	syscall
+	
+	#input the integer
+	li $v0, 5	# syscall 5 reads an integer
+	syscall
+	move	$t3, $v0
+	
+	
+	calculation:
+		mul	$t1, $t1, 3
+		add	$t0, $t0, $t1
+		mul	$t0, $t0, 3
+		
+		div	$t2, $t2, 4
+		
+		mul	$t0, $t0, $t2
+		
+		
+		div	$t0, $t3
+		mfhi	$t1
+		
+	output:
+		la $a0,outputPrompt	# output prompt message on terminal
+		li $v0,4	# syscall 4 prints the string
+		syscall
+		
+		move $a0,$t1	# print integer result
+		li $v0,1		# using syscall 1
+		syscall
+
+		la $a0, newline	# system call to print
+		li $v0,4		# out a newline
+		syscall
+		
+		li $v0,10
+		syscall
+		
+
+
+.data
+	promptA:	.asciiz "Value for a: "
+	promptB:	.asciiz "Value for b: "
+	promptC:	.asciiz "Value for c: "
+	promptD:	.asciiz "Value for d: "
+	newline:	.asciiz "\n"
+	
+	outputPrompt:	.asciiz "The output is: "

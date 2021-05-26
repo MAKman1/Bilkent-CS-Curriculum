@@ -1,0 +1,74 @@
+package Lab03a;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ShapeContainer
+{
+   Scanner scan = new Scanner( System.in);
+   
+   ArrayList<Shape> data;
+   
+   public ShapeContainer()
+   {
+      data = new ArrayList<Shape>();
+   }
+   
+   public void add( Shape s)
+   {
+      data.add( s);
+   }
+   
+   public double getArea()
+   {
+      double totalArea;
+      totalArea = 0;
+      
+      for( Shape temp: this.data)
+      {
+         totalArea = totalArea + temp.getArea();
+      }
+      
+      return totalArea;
+   }
+   
+   public String toString()
+   {
+      String output;
+      output = "";
+      
+      for (Shape temp: data)
+      {
+         output = output + temp.toString() + "\n";
+      }
+      
+      return output;
+   }
+   
+   public void removeAllSelected()
+   {
+      for( int i = 0; i < this.data.size(); i++)
+      {
+         if( this.data.get(i).getSelected() == true)
+            this.data.remove(i);
+      }
+   }
+   
+   public Shape selectShape(int x, int y)
+   {
+      for( Shape temp: this.data)
+      {
+         if (temp.contains( x, y) != null)
+         {
+            return temp;
+         }    
+      }
+      return null;
+   }
+   
+   public void relocateShape( int index)
+   {
+      System.out.print("Please enter x and y values: ");
+      this.data.get(index).setLocation(scan.nextInt(), scan.nextInt());
+   }
+}

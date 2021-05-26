@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+  <head>
+    <title>Php Scoping</title>
+  </head>
+  <body>
+    <?php
+      //global variable declaration
+      $x = "global";
+      $y = "global";
+      
+      function main(){
+        //redeclares x as no way to access found in PHP
+        $x = "main";
+        
+        //should output the variable defined in scope of main()
+        echo "x in main: $x\n";
+        //should output null as y not found in scope
+        echo "y in main: $y\n";
+        
+        foo2();
+        foo1();
+        
+        //should output the original value of x as not edited by children scopes
+        echo "x in main2: $x\n";
+        
+        foo2();
+      }
+      
+      function foo1(){
+        //redeclares x as no way to access found in PHP
+        $x = "foo1";
+        #y variable is global y
+        global $y;
+        
+        //x referenced from foo1, y is from global
+        echo "x in foo1: $x\n";
+        echo "y in foo1: $y\n";
+        //y declared now, is available now
+        $y = "foo1";
+      }
+        
+      function foo2(){
+        //since no nested scoping, y is null and x is redefined
+        $x = "foo2";
+        echo "x in foo2: $x\n";
+        echo "y in foo2: $y\n";
+        
+      }
+      
+      function foo3(){
+        echo "i in loop: ";
+        for ($i = 0; $i < 3; $i++){
+          //$i is accessible inside block
+          $a = $i;
+          echo $i . ',';
+        }
+        echo "\n";
+        //$i accessible
+        echo("\$i outside loop block in foo3: " . $i . "\n");
+        //$a accessible outside block
+        echo("\$a outside loop block in foo3: " . $a . "\n");
+      }
+      
+      main();
+      echo "\n";
+      foo3();
+    ?>
+  </body>
+</html>

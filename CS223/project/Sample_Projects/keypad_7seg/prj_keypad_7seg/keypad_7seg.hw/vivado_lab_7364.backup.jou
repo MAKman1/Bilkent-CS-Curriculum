@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado Lab Edition v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# 
+# Start of session at: Sat Mar 17 18:10:00 2018
+# Process ID: 7364
+# Current directory: d:/Users/hamze/Desktop/keypad_7seg_netlist_modules/keypad_7seg.hw
+# Command line: vivado_lab.exe -gui_launcher_event rodinguilauncherevent7912 d:\Users\hamze\Desktop\keypad_7seg_netlist_modules\keypad_7seg.hw\keypad_7seg.lpr
+# Log file: d:/Users/hamze/Desktop/keypad_7seg_netlist_modules/keypad_7seg.hw/vivado_lab.log
+# Journal file: d:/Users/hamze/Desktop/keypad_7seg_netlist_modules/keypad_7seg.hw\vivado_lab.jou
+#-----------------------------------------------------------
+start_gui
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {d:/Users/hamze/Desktop/keypad_7seg_netlist_modules/keypad_7seg.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {d:/Users/hamze/Desktop/keypad_7seg_netlist_modules/keypad_7seg.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

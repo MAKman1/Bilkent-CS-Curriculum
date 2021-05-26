@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Mar 19 21:21:05 2018
+# Process ID: 6528
+# Current directory: C:/Users/hamze/Desktop/display_8X8
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6380 C:\Users\hamze\Desktop\display_8X8\display_8X8.xpr
+# Log file: C:/Users/hamze/Desktop/display_8X8/vivado.log
+# Journal file: C:/Users/hamze/Desktop/display_8X8\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hamze/Desktop/display_8X8/display_8X8.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench.tcl
+run 10 ms
+run 50 ms
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+launch_simulation
+source testbench.tcl
+run 50 ms
+relaunch_sim
+run 50 ms
+relaunch_sim
+run 50 ms
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_run impl_1
+close_design
+launch_simulation
+launch_simulation
+source testbench.tcl
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1

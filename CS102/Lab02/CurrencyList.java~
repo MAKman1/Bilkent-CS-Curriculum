@@ -1,0 +1,26 @@
+java.util.ArrayList;
+
+public class CurrencyList
+{
+   final String URL = "http://tcmb.org.tr/kurlar/today.xml";
+   ArrayList<Currency> list;
+   String currencyCode;
+   double rate;
+   
+   
+   public Currency(String currencyCode)
+   {
+      super( URL);
+      this.currencyCode = currencyCode;
+   }
+   
+   public String getValue()
+   {
+      input = this.getPageContents();
+      index = input.indexOf(this.currencyCode);
+      index2 = input.indexOf("<ForexBuying>", index);
+      index3 = input.indexOf(">", index2 + 13);
+      
+      return input.substring(index2 + 13, index3);
+   }
+}

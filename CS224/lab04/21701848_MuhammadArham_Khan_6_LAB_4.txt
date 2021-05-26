@@ -1,0 +1,519 @@
+`timescale 1ns / 1ps
+module maindec (input logic[5:0] op, 
+	              output logic memwrite, branch,
+	              output logic alusrc, regdst, regwrite,
+	              output logic[1:0] aluop, memtoreg, jump );
+   logic [10:0] controls;
+
+   assign {regwrite, regdst, alusrc, branch, memwrite,
+                memtoreg, aluop, jump} = controls;
+
+  always_comb
+    case(op)
+      6'b000000: controls <= 11'b11000001100; // R-type
+      6'b100011: controls <= 11'b10100010000; // LW
+      6'b101011: controls <= 11'b00101000000; // SW
+      6'b000100: controls <= 11'b00010000100; // BEQ
+      6'b001000: controls <= 11'b10100000000; // ADDI
+      6'b000010: controls <= 11'b00000000001; // J
+      6'b000001: controls <= 11'b10000100010; // JALR
+      6'b111111: controls <= 11'b00010001000; // BGT  00010001000
+	
+      default:   controls <= 11'bxxxxxxxxxxx; // illegal op
+    endcase
+endmodule
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 04/04/2019 06:12:15 PM
+// Design Name: 
+// Module Name: testbench2
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module testbench2();
+   logic clk;
+   logic reset;
+   logic[31:0] pc, instr;
+   logic [31:0] writedata, dataadr;
+   logic memwrite;
+   // instantiate device to be tested
+   top dut (clk, reset, writedata, dataadr, memwrite, pc, instr);
+   // initialize test
+   initial
+       begin
+           reset <= 1; # 1; reset <= 0;
+       end
+   // generate clock to sequence tests
+   always
+       begin
+           clk <= 1; # 5; clk <= 0; # 5;
+       end
+   // check results
+   always @(negedge clk)
+       begin
+           if (memwrite) begin
+               if (dataadr===84 & writedata===7) begin
+                   $display("Simulation succeeded");
+                   $stop;
+               end else if (dataadr !== 80) begin
+                   $display("Simulation failed");
+                   $stop;
+               end
+           end
+       end
+endmodule
+
+`timescale 1ns / 1ps
+module alu(input  logic [31:0] a, b, 
+           input  logic [2:0]  alucont, 
+           output logic [31:0] result,
+           output logic zero, gt);
+        
+    logic [31:0] temp, temp2;
+    logic equal;
+    
+    assign temp = a - b;
+    
+    assign equal = temp[0] | temp[1] | temp[2] | temp[3] | temp[4] | temp[5] | temp[6] | temp[7] | temp[8]
+                                                                 | temp[9] | temp[10] | temp[11] | temp[12] | temp[13] | temp[14] | temp[15] | temp[16] | temp[17]
+                                                                  | temp[18] | temp[19] | temp[20] | temp[21] | temp[22] | temp[23] | temp[24] | temp[25] | temp[26]
+                                                                   | temp[27] | temp[28] | temp[29] | temp[30] | temp[31];
+    assign temp2 = ~temp[31] & equal;
+    
+    
+        always_comb 
+           case (alucont)
+               3'b000:
+               begin
+                 result = a & b; 
+                 gt = 0;
+              end
+               3'b001:
+               begin
+                 result = a | b; 
+                 gt = 0;
+              end
+               3'b010:
+               begin
+                 result = a + b; 
+                 gt = 0;
+              end
+               
+               3'b011:
+               begin
+                  result = 32'b11111111111111111111111111111111;
+                  gt = temp2 ? 1 : 0;
+               end
+               
+               3'b100:
+               begin
+                 result = a & ~b; 
+                 gt = 0;
+              end
+               3'b101:
+               begin
+                 result = a | ~b; 
+                 gt = 0;
+              end
+               3'b110:
+               begin
+                 result = temp; 
+                 gt = 0;
+              end
+               3'b111:
+               begin
+                 result = temp[31]; 
+                 gt = 0;
+              end
+           endcase
+    assign zero = ~result[0] & ~result[1] & ~result[2] & ~result[3] & ~result[4] & ~result[5] & ~result[6] &
+                                          ~result[7] & ~result[8] & ~result[9] & ~result[10] & ~result[11] & ~result[12] & ~result[13] & ~result[14] &
+                                          ~result[15] & ~result[16] & ~result[17] & ~result[18] & ~result[19] &~result[20]&~result[21]&~result[22]&~result[23]&
+                                          ~result[24]&~result[25]&~result[26]&~result[27]&~result[28]&~result[29]&~result[30]&~result[31];
+endmodule`timescale 1ns / 1ps
+// External instruction memory used by MIPS single-cycle
+// processor. It models instruction memory as a stored-program 
+// ROM, with address as input, and instruction as output
+
+
+module imem ( input logic [5:0] addr, output logic [31:0] instr);
+
+// imem is modeled as a lookup table, a stored-program byte-addressable ROM
+	always_comb
+	   case ({addr,2'b00})		   	// word-aligned fetch
+//		address		instruction
+//		-------		-----------
+		8'h00: instr = 32'h20020005;  	// disassemble, by hand 
+		8'h04: instr = 32'h2003000c;  	// or with a program,
+		8'h08: instr = 32'h2067fff7;  	// to find out what
+		8'h0c: instr = 32'h00e22025;  	// this program does!
+		8'h10: instr = 32'h00642824;
+		8'h14: instr = 32'h00a42820;
+		8'h18: instr = 32'h10a7000a; //10a7000a
+		8'h1c: instr = 32'h0064202a;
+		//
+		8'h20: instr = 32'h20090005; //t0 = 5
+		8'h24: instr = 32'h200a0007; //t1 = 7
+		8'h28: instr = 32'hfd2a0002; // fd2a0002   //fd490002
+		//
+		8'h2c: instr = 32'h20090000;
+		8'h30: instr = 32'h052a0000;
+		//
+		8'h34: instr = 32'h10800001;
+		8'h38: instr = 32'h20050000;
+		8'h3c: instr = 32'h00e2202a;
+		8'h40: instr = 32'h00853820;
+		8'h44: instr = 32'h00e23822;
+		8'h48: instr = 32'hac670044;
+		8'h4c: instr = 32'h8c020050;
+		8'h50: instr = 32'h08000016;
+		8'h54: instr = 32'h20020001;
+		8'h58: instr = 32'hac020054;
+		8'h5c: instr = 32'h08000012;	// j 48, so it will loop here
+	     default:  instr = {32{1'bx}};	// unknown address
+	   endcase
+endmodule
+
+
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 04/05/2019 04:00:13 AM
+// Design Name: 
+// Module Name: pulse_controller
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+// 
+//   This module takes a slide switch or pushbutton input and 
+//   does the following:
+//     --debounces it (ignoring any addtional changes for ~40 milliseconds)
+//     --synchronizes it with the clock edges
+//     --produces just one pulse, lasting for one clock period
+//   
+//   Note that the 40 millisecond debounce time = 2000000 cycles of 
+//   50MHz clock (which has 20 nsec period)
+//   
+//   sw_input: the signal coming from the slide switch or pushbutton
+//   CLK: the 50 MHz system clock on the BASYS2 board
+//   clk_pulse: the synchronized debounced single-pulse output
+//
+//////////////////////////////////////////////////////////////////////////////////
+
+module pulse_controller(
+	input CLK, sw_input, clear,
+	output reg clk_pulse );
+
+	 reg [2:0] state, nextstate;
+	 reg [27:0] CNT; 
+	 wire cnt_zero; 
+
+	always @ (posedge CLK, posedge clear)
+	   if(clear)
+	    	state <=3'b000;
+	   else
+	    	state <= nextstate;
+
+	always @ (sw_input, state, cnt_zero)
+          case (state)
+             3'b000: begin if (sw_input) nextstate = 3'b001; 
+                           else nextstate = 3'b000; clk_pulse = 0; end	     
+             3'b001: begin nextstate = 3'b010; clk_pulse = 1; end
+             3'b010: begin if (cnt_zero) nextstate = 3'b011; 
+                           else nextstate = 3'b010; clk_pulse = 1; end
+             3'b011: begin if (sw_input) nextstate = 3'b011; 
+                           else nextstate = 3'b100; clk_pulse = 0; end
+             3'b100: begin if (cnt_zero) nextstate = 3'b000; 
+                           else nextstate = 3'b100; clk_pulse = 0; end
+            default: begin nextstate = 3'b000; clk_pulse = 0; end
+          endcase
+
+	always @(posedge CLK)
+	   case(state)
+		3'b001: CNT <= 100000000;
+		3'b010: CNT <= CNT-1;
+		3'b011: CNT <= 100000000;
+		3'b100: CNT <= CNT-1;
+	   endcase
+
+//  reduction operator |CNT gives the OR of all bits in the CNT register	
+	assign cnt_zero = ~|CNT;
+
+endmodule
+`timescale 1ns / 1ps
+module top  (input   logic 	 clk, reset,        
+	     output  logic[31:0] writedata, dataadr,            
+	     output  logic       memwrite,
+	     output logic[31:0]  pc, instr
+	     );  
+
+   logic [31:0] readdata;  
+
+
+   // instantiate processor and memories  
+   mips mips (clk, reset, pc, instr, memwrite, dataadr, writedata, readdata);  
+   imem imem (pc[7:2], instr);  
+   dmem dmem (clk, memwrite, dataadr, writedata, readdata);
+
+endmodule
+`timescale 1ns / 1ps
+module top2  (input   logic 	 clk, reset, clkbutton,        
+//	     output  logic[31:0] writedata, dataadr,            
+//	     output  logic       memwrite,
+	     //output logic[31:0]  pc, instr,
+//	     output logic[6:0] C,
+	     
+	     output logic[6:0] segments, 
+	     output logic[3:0] AN,
+	     output logic DP,
+	     output logic memwrite
+	     );  
+
+   logic [31:0] readdata;  
+   logic clock, resetsim;
+   
+   logic[31:0] writedata, dataadr;
+   
+   logic[31:0]  pc, instr;
+  
+
+   pulse_controller p1( clk, clkbutton, 1'b0, clock);
+   pulse_controller p2( clk, reset, 1'b0, resetsim);
+   
+   display_controller display(clk, 4'b0, 4'b1111, writedata[7:4], writedata[3:0], dataadr[7:4], dataadr[3:0], AN, segments, DP);
+
+   // instantiate processor and memories  
+   mips mips (clock, resetsim, pc, instr, memwrite, dataadr, writedata, readdata);  
+   imem imem (pc[7:2], instr);  
+   dmem dmem (clk, memwrite, dataadr, writedata, readdata);
+
+endmodule
+`timescale 1ns / 1ps
+module top2  (input   logic 	 clk, reset, clkbutton,        
+//	     output  logic[31:0] writedata, dataadr,            
+//	     output  logic       memwrite,
+	     //output logic[31:0]  pc, instr,
+//	     output logic[6:0] C,
+	     
+	     output logic[6:0] segments, 
+	     output logic[3:0] AN,
+	     output logic DP,
+	     output logic memwrite
+	     );  
+
+   logic [31:0] readdata;  
+   logic clock, resetsim;
+   
+   logic[31:0] writedata, dataadr;
+   
+   logic[31:0]  pc, instr;
+  
+
+   pulse_controller p1( clk, clkbutton, 1'b0, clock);
+   pulse_controller p2( clk, reset, 1'b0, resetsim);
+   
+   display_controller display(clk, 4'b0, 4'b1111, writedata[7:4], writedata[3:0], dataadr[7:4], dataadr[3:0], AN, segments, DP);
+
+   // instantiate processor and memories  
+   mips mips (clock, resetsim, pc, instr, memwrite, dataadr, writedata, readdata);  
+   imem imem (pc[7:2], instr);  
+   dmem dmem (clk, memwrite, dataadr, writedata, readdata);
+
+endmodule
+
+`timescale 1ns / 1ps
+module datapath (input  logic clk, reset, pcsrc, alusrc, regdst, regwrite,
+			     input logic[1:0] jump, memtoreg, 
+		 	     input  logic[2:0]  alucontrol, 
+                 output logic zero, gt,
+		         output logic[31:0] pc, 
+	             input  logic[31:0] instr,
+                 output logic[31:0] aluout, writedata, 
+	             input  logic[31:0] readdata);
+
+  logic [4:0]  writereg;
+  logic [31:0] pcnext, pcnextbr, pcplus4, pcbranch;
+  logic [31:0] signimm, signimmsh, srca, srcb, result;
+ 
+  // next PC logic
+  flopr #(32) pcreg(clk, reset, pcnext, pc);
+  adder       pcadd1(pc, 32'b100, pcplus4);
+  sl2         immsh(signimm, signimmsh);
+  adder       pcadd2(pcplus4, signimmsh, pcbranch);
+  mux2 #(32)  pcbrmux(pcplus4, pcbranch, pcsrc,
+                      pcnextbr);
+  mux4 #(32)  pcmux(pcnextbr, {pcplus4[31:28], 
+                    instr[25:0], 2'b00}, 32'b0, 32'b0, jump, pcnext); //srca
+
+// register file logic
+   regfile     rf (clk, regwrite, instr[25:21], instr[20:16], writereg,
+                   result, srca, writedata);
+
+   mux2 #(5)    wrmux (instr[20:16], instr[15:11], regdst, writereg);
+   mux4 #(32)  resmux (aluout, readdata, pcplus4, 32'b0, memtoreg, result);
+   signext         se (instr[15:0], signimm);
+  	// ALU logic
+   mux2 #(32)  srcbmux (writedata, signimm, alusrc, srcb);
+   alu         alu (srca, srcb, alucontrol, aluout, zero, gt);
+endmodule
+
+
+`timescale 1ns / 1ps
+module signext (input  logic[15:0] a,
+                output logic[31:0] y);
+              
+  assign y = {{16{a[15]}}, a};    // sign-extends 16-bit a
+endmodule
+
+`timescale 1ns / 1ps
+module regfile (input    logic clk, we3, 
+                input    logic[4:0]  ra1, ra2, wa3, 
+                input    logic[31:0] wd3, 
+                output   logic[31:0] rd1, rd2);
+
+  logic [31:0] rf [31:0];
+
+  // three ported register file: read two ports combinationally
+  // write third port on rising edge of clock. Register0 hardwired to 0.
+
+  always_ff @(posedge clk)
+     if (we3) 
+         rf [wa3] <= wd3;	
+
+  assign rd1 = (ra1 != 0) ? rf [ra1] : 0;
+  assign rd2 = (ra2 != 0) ? rf[ ra2] : 0;
+
+endmodule
+// paramaterized 2-to-1 MUX
+module mux2 #(parameter WIDTH = 8)
+             (input  logic[WIDTH-1:0] d0, d1,  
+              input  logic s, 
+              output logic[WIDTH-1:0] y);
+  
+   assign y = s ? d1 : d0; 
+endmodule
+`timescale 1ns / 1ps
+module datapath (input  logic clk, reset, memtoreg, pcsrc, alusrc, regdst,
+                 input  logic regwrite, jump, 
+		 input  logic[2:0]  alucontrol, 
+                 output logic zero, 
+		 output logic[31:0] pc, 
+	         input  logic[31:0] instr,
+                 output logic[31:0] aluout, writedata, 
+	         input  logic[31:0] readdata);
+
+  logic [4:0]  writereg;
+  logic [31:0] pcnext, pcnextbr, pcplus4, pcbranch;
+  logic [31:0] signimm, signimmsh, srca, srcb, result;
+ 
+  // next PC logic
+  flopr #(32) pcreg(clk, reset, pcnext, pc);
+  adder       pcadd1(pc, 32'b100, pcplus4);
+  sl2         immsh(signimm, signimmsh);
+  adder       pcadd2(pcplus4, signimmsh, pcbranch);
+  mux2 #(32)  pcbrmux(pcplus4, pcbranch, pcsrc,
+                      pcnextbr);
+  mux2 #(32)  pcmux(pcnextbr, {pcplus4[31:28], 
+                    instr[25:0], 2'b00}, jump, pcnext);
+
+// register file logic
+   regfile     rf (clk, regwrite, instr[25:21], instr[20:16], writereg,
+                   result, srca, writedata);
+
+   mux2 #(5)    wrmux (instr[20:16], instr[15:11], regdst, writereg);
+   mux2 #(32)  resmux (aluout, readdata, memtoreg, result);
+   signext         se (instr[15:0], signimm);
+
+  // ALU logic
+   mux2 #(32)  srcbmux (writedata, signimm, alusrc, srcb);
+   alu         alu (srca, srcb, alucontrol, aluout, zero);
+
+endmodule
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 04/04/2019 06:54:54 PM
+// Design Name: 
+// Module Name: imem
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+// External instruction memory used by MIPS single-cycle
+// processor. It models instruction memory as a stored-program 
+// ROM, with address as input, and instruction as output
+
+
+module imem ( input logic [5:0] addr, output logic [31:0] instr);
+
+// imem is modeled as a lookup table, a stored-program byte-addressable ROM
+	always_comb
+	   case ({addr,2'b00})		   	// word-aligned fetch
+//		address		instruction
+//		-------		-----------
+		8'h00: instr = 32'h20020005;  	// disassemble, by hand 
+		8'h04: instr = 32'h2003000c;  	// or with a program,
+		8'h08: instr = 32'h2067fff7;  	// to find out what
+		8'h0c: instr = 32'h00e22025;  	// this program does!
+		8'h10: instr = 32'h00642824;
+		8'h14: instr = 32'h00a42820;
+		8'h18: instr = 32'h10a7000a;
+		8'h1c: instr = 32'h0064202a;
+		8'h20: instr = 32'h10800001;
+		8'h24: instr = 32'h20050000;
+		8'h28: instr = 32'h00e2202a;
+		8'h2c: instr = 32'h00853820;
+		8'h30: instr = 32'h00e23822;
+		8'h34: instr = 32'hac670044;
+		8'h38: instr = 32'h8c020050;
+		8'h3c: instr = 32'h08000011;
+		8'h40: instr = 32'h20020001;
+		8'h44: instr = 32'hac020054;
+		8'h48: instr = 32'h08000012;	// j 48, so it will loop here
+	     default:  instr = {32{1'bx}};	// unknown address
+	   endcase
+endmodule

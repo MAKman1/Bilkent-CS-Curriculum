@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1555763099 source:d:\bilkent\cs202\hw3\hw3\medianheap.cpp
+	"MedianHeap.h"
+
+1555758681 source:d:\bilkent\cs202\hw3\hw3\minheap.cpp
+	"MinHeap.h"
+
+1555758437 source:d:\bilkent\cs202\hw3\hw3\maxheap.cpp
+	"MaxHeap.h"
+
+1555758824 d:\bilkent\cs202\hw3\hw3\maxheap.h
+
+1555758840 d:\bilkent\cs202\hw3\hw3\minheap.h
+
+1555793457 source:d:\bilkent\cs202\hw3\hw3\main.cpp
+	<iostream>
+	<fstream>
+	"HuffmanHeap.h"
+	"HuffmanCode.h"
+	"string.h"
+
+1555763230 d:\bilkent\cs202\hw3\hw3\medianheap.h
+	"MaxHeap.h"
+	"MinHeap.h"
+
+1555791687 source:d:\bilkent\cs202\hw3\hw3\huffmancode.cpp
+	"HuffmanCode.h"
+	"string.h"
+	<iostream>
+
+1555791114 source:d:\bilkent\cs202\hw3\hw3\huffmanqueue.cpp
+	"HuffmanQueue.h"
+	"string.h"
+
+1555790229 source:d:\bilkent\cs202\hw3\hw3\huffmanheap.cpp
+	"HuffmanHeap.h"
+	"string.h"
+
+1555790248 d:\bilkent\cs202\hw3\hw3\huffmanheap.h
+	"string.h"
+
+1555774677 d:\bilkent\cs202\hw3\hw3\huffmanqueue.h
+	"HuffmanHeap.h"
+
+1555791653 d:\bilkent\cs202\hw3\hw3\huffmancode.h
+	"HuffmanQueue.h"
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+        <script type="text/javascript">
+                //global variable declarations
+                var x = "global";
+                var y = "global";
+                function main() {
+                        var x = "main";
+                        //should output the variable defined in scope of main()
+                        document.write("x in main: " + x + "<br>");
+                        //should output the y defined in global scope
+                        document.write("y in main: " + y + "<br>");
+
+                        function foo1() {
+                                //editing x variable in parent (ie: main)
+                                x = "main->foo1";
+
+                                document.write("x in foo1: " + x + "<br>");
+                                //prints global y because no y in parent
+                                document.write("y in foo1: " + y + "<br>");
+                        }
+                        foo2();
+                        foo1();
+
+                        //should output the edited x defined in scope of main()
+                        document.write("x in main2: " + x + "<br>");
+
+                        foo2();
+                }
+
+                function foo2() {
+                        //since static scoping, global y printed
+                        //local x printed
+                        var x = "foo2";
+                        document.write("x in foo2: " + x + "<br>");
+                        document.write("y in foo2: " + y + "<br>");
+                }
+
+                function foo3() {
+                        document.write("i in loop: ");
+                        for (var i = 0; i < 3; i++) {
+                                //i is accessible inside block
+                                var a = i;
+                                document.write(i + ',');
+                        }
+                        document.write("<br>")
+                        //i accessible
+                        document.write("i outside loop block in foo3: " + i + "<br>");
+                        //a accessible outside block
+                        document.write("a outside loop block in foo3: " + a + "<br>");
+                }
+
+                main();
+                document.write("<br>")
+                foo3();
+        </script>
+</head>
+
+</html>

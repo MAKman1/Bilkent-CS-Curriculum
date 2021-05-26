@@ -1,0 +1,32 @@
+package Lab03b;
+public class IntBagIterator implements IntIterator
+{
+
+   IntBag aBag;
+   int index;
+   
+   public IntBagIterator( IntBag bag)
+   {
+      this.aBag = bag;
+      this.index = 0;
+   }
+   
+   public boolean hasNext()
+   {
+      if( index < this.aBag.size())
+         return true;
+      return false;
+   }
+   
+   public Integer next()
+   {
+      this.index++;
+      return aBag.get(this.index - 1);
+   }
+   
+   public int nextInt()
+   {
+      this.index++;
+      return aBag.get(this.index - 1); 
+   }
+}

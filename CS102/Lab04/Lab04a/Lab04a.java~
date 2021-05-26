@@ -1,0 +1,97 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+/**
+This program displays an empty frame.
+*/
+public class Lab04a   
+{
+   public static int tries;
+   public static JButton[][] buttons;
+   
+   public static void main(String[] args)
+   {
+      final int DIMENSIONS = 5;
+      final int FRAME_WIDTH = 400;
+      final int FRAME_HEIGHT = 400;
+      final int TEXT_HEIGHT = 100;
+      final int TEXT_WIDTH = 400;
+      final int locationX;
+      final int locationY;
+      
+      tries = 0;
+      locationX = (int) (Math.random() * DIMENSIONS);
+      locationY = (int) (Math.random() * DIMENSIONS);
+      
+      final JFrame frame = new JFrame();
+      final JPanel panel = new JPanel();
+      final JPanel upperPanel = new JPanel();
+      final JLabel text =  new JLabel();
+      
+
+      
+      frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+      frame.setTitle("GUESS GAME!");
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      frame.setVisible(true);
+      
+      
+      buttons = new JButton[DIMENSIONS][DIMENSIONS];
+      text.setText("Number of tries: " + tries);
+      text.setSize(TEXT_WIDTH, TEXT_HEIGHT);
+      text.setHorizontalAlignment(SwingConstants.CENTER);
+      
+      /*
+       * Inner class to implement actionListener
+       */
+      class ClickListener implements ActionListener{
+         public void actionPerformed( ActionEvent event){
+            JButton temp = (JButton) event.getSource();
+            
+            
+            if(buttons[locationX][locationY] == temp){
+               text.setText("Game won in " + tries + " tries!");
+               panel.setVisible(false);
+               
+            }
+            else{
+               tries++;
+               text.setText("Number of tries: " + tries);
+               
+               //disabling the clicked button
+               for( int j = 0; j < DIMENSIONS; j++){
+                  for( int k = 0; k < DIMENSIONS; k++){
+                     if(buttons[j][k] == temp){
+                        buttons[j][k].setEnabled(false);
+                     }
+                  }
+               } 
+               
+               
+            }
+         }
+      }
+      ClickListener listener = new ClickListener();
+      
+      
+      panel.setLayout(new GridLayout(DIMENSIONS, DIMENSIONS));
+      for( int count = 0; count < DIMENSIONS; count++)
+      {
+         for( int i = 0; i < DIMENSIONS; i++)
+         {
+            buttons[count][i] = new JButton("*");
+            buttons[count][i].addActionListener(listener);
+            panel.add(buttons[count][i]);
+         }
+      }
+      upperPanel.setLayout(new BoxLayout(upperPanel, BoxLayout.Y_AXIS));
+      upperPanel.add(text);
+      upperPanel.add(panel);
+      frame.add(upperPanel);
+
+      
+      
+      
+   }
+}
