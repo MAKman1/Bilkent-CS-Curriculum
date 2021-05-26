@@ -1,1 +1,0 @@
-# Bilkent-CS-Curriculum
